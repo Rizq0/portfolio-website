@@ -7,13 +7,27 @@ export const Header: React.FC = () => {
     setDarkMode(!darkMode);
   };
 
+  const handleDownload = () => {
+    if (confirm("Are you sure you want to download this file?")) {
+      const link = document.createElement("a");
+      link.href = "src/assets/Joe Brown CV PDF NC.pdf";
+      link.download = "Joe Brown - CV 2024.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   return (
     <header className="w-full">
       <div className="h-32 mx-auto flex justify-around items-center max-w-[1280px] flex-wrap w-full">
         <nav>
           <ul className="flex space-x-4 m-2">
             <li className="flex items-center justify-center flex-grow">
-              <a className="text-headlinelight dark:text-headlinedark">
+              <a
+                href="https://www.linkedin.com/in/joe-brown0/"
+                className="text-headlinelight dark:text-headlinedark"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -34,7 +48,10 @@ export const Header: React.FC = () => {
               </a>
             </li>
             <li className="flex items-center justify-center flex-grow">
-              <a className="text-headlinelight dark:text-headlinedark">
+              <a
+                href="https://github.com/Rizq0"
+                className="text-headlinelight dark:text-headlinedark"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -51,7 +68,11 @@ export const Header: React.FC = () => {
               </a>
             </li>
             <li className="flex items-center justify-center flex-grow">
-              <a className="text-headlinelight dark:text-headlinedark">
+              <a
+                href="#"
+                onClick={handleDownload}
+                className="text-headlinelight dark:text-headlinedark"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
