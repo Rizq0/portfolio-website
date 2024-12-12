@@ -6,7 +6,7 @@ export const AboutMe: React.FC = () => {
       <h1 className="text-headlinelight dark:text-headlinedark font-gabarito text-4xl self-center md:self-start pb-4">
         About Me
       </h1>
-      <div className=" w-[250px] h-[250px] rounded-full overflow-hidden border-solid border-4 border-button dark:border-headlinedark">
+      <div className=" w-[250px] h-[250px] rounded-full overflow-hidden border-solid border-4 border-backgrounddark dark:border-headlinedark">
         <img
           src="src/assets/images/selfimage.png"
           alt="Joe Self Image"
