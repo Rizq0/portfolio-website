@@ -3,7 +3,7 @@ import React from "react";
 export const AboutMe: React.FC = () => {
   return (
     <div className="flex flex-col items-center max-w-[1920px] flex-wrap w-full pt-4">
-      <h1 className="text-headlinelight dark:text-headlinedark font-gabarito text-4xl self-center md:self-start pb-4">
+      <h1 className="text-headlinelight dark:text-headlinedark underline underline-offset-4 md:no-underline font-gabarito text-4xl self-center md:self-start pb-4">
         About Me
       </h1>
       <div className=" w-[250px] h-[250px] rounded-full overflow-hidden border-solid border-4 border-backgrounddark dark:border-headlinedark">

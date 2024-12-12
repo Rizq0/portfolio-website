@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Northcoders Backend - NC News",
+    "description": "This project is an API built to be a backend service for accessing application data programmatically, which will allow information to be provided to the frontend architecture.",
+    "technologies": [
+      "Jest",
+      "Supertest",
+      "Express",
+      "JavaScript",
+      "PSQL",
+      "PostgreSQL"
+    ],
+    "link": "https://joe-b-nc-news.onrender.com/api",
+    "image": "https://github.com/Rizq0/be-nc-news/blob/main/misc/be-demo.gif",
+    "respository": "https://github.com/Rizq0/be-nc-news",
+    "state": "Live"
+  },
+  {
+    "id": 2,
+    "name": "Northcoders Frontend - NC News",
+    "description": "This project is a dynamic frontend designed to provide users with an engaging and intuitive interface for the nc-news-backend-api. With functionality of the components being prioritised during development.",
+    "technologies": ["React", "Vite", "Lottie", "Axios", "JavaScript"],
+    "link": "https://nc-news-joeb.netlify.app/",
+    "image": "https://github.com/Rizq0/fe-nc-news/blob/main/plan/wanadQ7.gif",
+    "respository": "https://github.com/Rizq0/fe-nc-news",
+    "state": "Live"
+  },
+  {
+    "id": 3,
+    "name": "Meteorite Tracking Map",
+    "description": "This small scale project is a web-based tool designed to display an interactive map showing currently known meteorite landings from the NASA API.",
+    "technologies": ["React", "Leaflet", "Vite", "Axios", "JavaScript"],
+    "link": "",
+    "image": "https://github.com/Rizq0/meteor-map/blob/main/src/assets/meteor-demo.gif",
+    "respository": "https://github.com/Rizq0/meteor-map",
+    "state": "WIP"
+  },
+  {
+    "id": 4,
+    "name": "Playd - Find A DJ",
+    "description": "This apps helps DJs find clients, and music lovers to find the perfect sound for their event. It's like Tinder - but for music.",
+    "technologies": ["React Native", "Expo", "Firebase", "TypeScript"],
+    "link": "https://northcoders.com/project-phase/playd",
+    "image": "https://imgur.com/zv1MKB2",
+    "respository": "https://github.com/Dimeben/playd",
+    "state": "Live"
+  },
+  {
+    "id": 5,
+    "name": "Tier List Creator - Work in Progress",
+    "description": "A work in progress full stack web app which will allow users to create custom tier lists.",
+    "technologies": [
+      "React",
+      "Mantine",
+      "Go",
+      "TypeScript",
+      "Gin",
+      "GORM",
+      "SQLite"
+    ],
+    "link": "",
+    "image": "https://i.imgur.com/9uytpbm.png",
+    "respository": "https://github.com/Lost-in-the-Idea/tier-list-creator",
+    "state": "WIP"
+  },
+  {
+    "id": 6,
+    "name": "Portfolio Website",
+    "description": "A complete showing of all projects and skills I have developed over the years.",
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    "link": "http://www.joedev.co.uk/",
+    "image": "https://imgur.com/5fKSd8s",
+    "respository": "https://github.com/Rizq0/portfolio-website",
+    "state": "WIP"
+  }
+]

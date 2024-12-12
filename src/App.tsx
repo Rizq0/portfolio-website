@@ -1,5 +1,6 @@
 import { AboutMe } from "./components/AboutMe";
 import { Header } from "./components/Header";
+import { Projects } from "./components/Projects";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div className="max-w-[1280px] px-4">
         <Header />
         <AboutMe />
+        <Projects />
       </div>
     </div>
   );
