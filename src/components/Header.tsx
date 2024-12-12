@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Header: React.FC = () => {
-  const [darkMode, setDarkMode] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(true);
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
     setDarkMode(!darkMode);
