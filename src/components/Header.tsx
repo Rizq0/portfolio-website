@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className="w-full">
-      <div className="h-32 mx-auto flex justify-around items-center max-w-[1280px] flex-wrap w-full">
+      <div className="h-32 mx-auto flex justify-around items-center max-w-[1920px] flex-wrap w-full">
         <nav>
           <ul className="flex space-x-4 m-2">
             <li className="flex items-center justify-center flex-grow">
