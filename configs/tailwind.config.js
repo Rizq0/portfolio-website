@@ -2,6 +2,7 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "selector",
+  safelist: ["md:pt-0"],
   theme: {
     screens: {
       sm: "640px",
@@ -18,14 +19,6 @@ export default {
       backgroundlight: "#fffffe",
       headlinelight: "#0f0e17",
       subheadlinelight: "#2e2f3e",
-    },
-    spacing: {
-      1: "8px",
-      2: "12px",
-      3: "16px",
-      4: "24px",
-      5: "32px",
-      6: "48px",
     },
     extend: {
       fontFamily: {
