@@ -12,7 +12,7 @@ export const AboutMe: React.FC = () => {
         />
       </div>
       <h2 className="text-headlinelight dark:text-headlinedark font-gabarito text-4xl pt-4">
-        Hello! I'm Joe!
+        Hello! I'm <span className="text-button">Joe!</span>
       </h2>
       <p className="dark:text-headlinedark text-subheadlinelight font-gabarito text-2xl text-center pt-4">
         I’m a passionate{" "}

@@ -68,10 +68,16 @@
     "id": 6,
     "name": "Portfolio Website",
     "description": "A complete showing of all projects and skills I have developed over the years.",
-    "technologies": ["React", "TypeScript", "TailwindCSS", "Vite"],
+    "technologies": [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Vite",
+      "React Hot Toast"
+    ],
     "link": "http://www.joedev.co.uk/",
-    "image": "https://i.imgur.com/5fKSd8s.png",
+    "image": "https://github.com/Rizq0/portfolio-website/blob/main/docs/demo.gif?raw=true",
     "respository": "https://github.com/Rizq0/portfolio-website",
-    "state": "WIP"
+    "state": "Live"
   }
 ]
