@@ -11,7 +11,9 @@ function App() {
         <Toaster position="bottom-center" />
         <Header />
         <AboutMe />
+        <hr className="text-button mt-12 mb-12 border-t-[4px] rounded" />
         <Projects />
+        <hr className="text-button mt-12 mb-12 border-t-[4px] rounded" />
         <ContactMe />
       </div>
     </div>

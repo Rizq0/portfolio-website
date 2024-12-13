@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
             <li className="flex items-center justify-center flex-grow">
               <a
                 href="https://www.linkedin.com/in/joe-brown0/"
-                className="text-headlinelight dark:text-headlinedark"
+                className="text-backgrounddark hover:text-button dark:text-backgroundlight"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
             <li className="flex items-center justify-center flex-grow">
               <a
                 href="https://github.com/Rizq0"
-                className="text-headlinelight dark:text-headlinedark"
+                className="text-backgrounddark hover:text-button dark:text-backgroundlight"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ export const Header: React.FC = () => {
               <a
                 href="#"
                 onClick={handleDownload}
-                className="text-headlinelight dark:text-headlinedark"
+                className="text-backgrounddark hover:text-button dark:text-backgroundlight"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export const Header: React.FC = () => {
             </li>
             <li className="flex items-center justify-center flex-grow">
               <a
-                className="text-headlinelight dark:text-headlinedark"
+                className="text-backgrounddark hover:text-button dark:text-backgroundlight"
                 href="#contact"
               >
                 <svg
@@ -135,7 +135,7 @@ export const Header: React.FC = () => {
             <li className="flex items-center justify-center flex-grow">
               <button
                 onClick={toggleDarkMode}
-                className="text-headlinelight dark:text-headlinedark"
+                className="text-backgrounddark hover:text-button dark:text-backgroundlight"
               >
                 {darkMode ? (
                   <svg
