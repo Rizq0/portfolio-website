@@ -29,7 +29,7 @@ export const ContactMe: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col pt-4">
+    <div className="flex flex-col pt-4 pb-4">
       <h1
         id="contact"
         className="text-headlinelight underline underline-offset-4 md:no-underline dark:text-headlinedark font-gabarito text-4xl self-center md:self-start pb-4"
@@ -39,7 +39,7 @@ export const ContactMe: React.FC = () => {
       <form
         ref={form}
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 max-w-md self-center w-full"
+        className="flex flex-col gap-4 self-center max-w-lg w-full"
       >
         <input
           type="text"
@@ -65,7 +65,7 @@ export const ContactMe: React.FC = () => {
         <textarea
           name="message"
           placeholder="Your Message"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark h-40 min-h-[48px] max-h-[150px]"
+          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark h-40 min-h-[48px] max-h-[250px]"
           required
         />
         <button
