@@ -48,6 +48,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
             <a
               className="text-backgrounddark hover:text-button dark:text-button dark:hover:text-backgroundlight"
               href={link}
+              target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +70,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
           <a
             className="text-backgrounddark hover:text-button dark:text-button dark:hover:text-backgroundlight"
             href={respository}
+            target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

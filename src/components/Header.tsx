@@ -46,6 +46,7 @@ export const Header: React.FC = () => {
             <li className="flex items-center justify-center flex-grow">
               <a
                 href="https://www.linkedin.com/in/joe-brown0/"
+                target="_blank"
                 className="text-backgrounddark hover:text-button dark:text-backgroundlight"
               >
                 <svg
@@ -70,6 +71,7 @@ export const Header: React.FC = () => {
             <li className="flex items-center justify-center flex-grow">
               <a
                 href="https://github.com/Rizq0"
+                target="_blank"
                 className="text-backgrounddark hover:text-button dark:text-backgroundlight"
               >
                 <svg
