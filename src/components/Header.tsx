@@ -1,10 +1,30 @@
 import React from "react";
+import toast from "react-hot-toast";
 
 export const Header: React.FC = () => {
   const [darkMode, setDarkMode] = React.useState(true);
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
     setDarkMode(!darkMode);
+    if (!darkMode) {
+      toast("My old friend!", {
+        icon: "🌚",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    } else {
+      toast("Let there be Light!", {
+        icon: "🌞",
+        style: {
+          borderRadius: "10px",
+          background: "#fff",
+          color: "#333",
+        },
+      });
+    }
   };
 
   const handleDownload = () => {
@@ -92,7 +112,10 @@ export const Header: React.FC = () => {
               </a>
             </li>
             <li className="flex items-center justify-center flex-grow">
-              <a className="text-headlinelight dark:text-headlinedark" href="#contact">
+              <a
+                className="text-headlinelight dark:text-headlinedark"
+                href="#contact"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
