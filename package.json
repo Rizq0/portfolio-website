@@ -1,9 +1,9 @@
 {
+  "homepage": "https://github.com/Rizq0/portfolio-website",
   "name": "portfolio-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rizq0.github.io/portfolio-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
