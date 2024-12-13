@@ -12,7 +12,7 @@
       "PostgreSQL"
     ],
     "link": "https://joe-b-nc-news.onrender.com/api",
-    "image": "https://github.com/Rizq0/be-nc-news/blob/main/misc/be-demo.gif",
+    "image": "https://github.com/Rizq0/be-nc-news/blob/main/misc/be-demo.gif?raw=true",
     "respository": "https://github.com/Rizq0/be-nc-news",
     "state": "Live"
   },
@@ -22,7 +22,7 @@
     "description": "This project is a dynamic frontend designed to provide users with an engaging and intuitive interface for the nc-news-backend-api. With functionality of the components being prioritised during development.",
     "technologies": ["React", "Vite", "Lottie", "Axios", "JavaScript"],
     "link": "https://nc-news-joeb.netlify.app/",
-    "image": "https://github.com/Rizq0/fe-nc-news/blob/main/plan/wanadQ7.gif",
+    "image": "https://github.com/Rizq0/fe-nc-news/blob/main/plan/wanadQ7.gif?raw=true",
     "respository": "https://github.com/Rizq0/fe-nc-news",
     "state": "Live"
   },
@@ -32,7 +32,7 @@
     "description": "This small scale project is a web-based tool designed to display an interactive map showing currently known meteorite landings from the NASA API.",
     "technologies": ["React", "Leaflet", "Vite", "Axios", "JavaScript"],
     "link": "",
-    "image": "https://github.com/Rizq0/meteor-map/blob/main/src/assets/meteor-demo.gif",
+    "image": "https://github.com/Rizq0/meteor-map/blob/main/src/assets/meteor-demo.gif?raw=true",
     "respository": "https://github.com/Rizq0/meteor-map",
     "state": "WIP"
   },
@@ -42,7 +42,7 @@
     "description": "This apps helps DJs find clients, and music lovers to find the perfect sound for their event. It's like Tinder - but for music.",
     "technologies": ["React Native", "Expo", "Firebase", "TypeScript"],
     "link": "https://northcoders.com/project-phase/playd",
-    "image": "https://imgur.com/zv1MKB2",
+    "image": "https://i.imgur.com/zv1MKB2.png",
     "respository": "https://github.com/Dimeben/playd",
     "state": "Live"
   },
@@ -68,9 +68,9 @@
     "id": 6,
     "name": "Portfolio Website",
     "description": "A complete showing of all projects and skills I have developed over the years.",
-    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    "technologies": ["React", "TypeScript", "TailwindCSS", "Vite"],
     "link": "http://www.joedev.co.uk/",
-    "image": "https://imgur.com/5fKSd8s",
+    "image": "https://i.imgur.com/5fKSd8s.png",
     "respository": "https://github.com/Rizq0/portfolio-website",
     "state": "WIP"
   }
