@@ -55,11 +55,11 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 width="32"
                 height="32"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path d="M9 15l6 -6"></path>
                 <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
