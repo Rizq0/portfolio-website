@@ -9,7 +9,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
   const { name, description, technologies, link, respository, image } = project;
 
   return (
-    <div className="relative flex flex-col p-4 border border-headlinelight dark:border-headlinedark rounded-lg min-h-[300px] group hover:cursor-pointer">
+    <div className="relative flex flex-col p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg min-h-[300px] group hover:cursor-pointer">
       <div
         className="absolute inset-0 z-0"
         style={{

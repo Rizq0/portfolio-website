@@ -17,14 +17,14 @@ export const AboutMe: React.FC = () => {
       <h2 className="text-headlinelight dark:text-headlinedark font-gabarito text-4xl pt-4">
         Hello! I'm Joe!
       </h2>
-      <p className="text-button font-gabarito text-2xl text-center pt-4">
+      <p className="dark:text-button text-subheadlinelight font-gabarito text-2xl text-center pt-4">
         I’m a passionate Full Stack Developer with a solid foundation in web
         development and expertise in both frontend and backend technologies. A
         quick learner and team player, I’m always eager to enhance my skills and
         explore new technologies. Excited to collaborate on innovative projects,
         I’m currently seeking new opportunities. Feel free to reach out!
       </p>
-      <p className="text-headlinelight dark:text-headlinedark font-gabarito text-2xl text-center pt-4">
+      <p className="text-subheadlinelight dark:text-headlinedark font-gabarito text-2xl text-center pt-4">
         Welcome to my portfolio!
       </p>
     </div>

@@ -92,7 +92,7 @@ export const Header: React.FC = () => {
               </a>
             </li>
             <li className="flex items-center justify-center flex-grow">
-              <a className="text-headlinelight dark:text-headlinedark">
+              <a className="text-headlinelight dark:text-headlinedark" href="#contact">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
