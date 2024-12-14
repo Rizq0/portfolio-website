@@ -21,7 +21,7 @@ This project is a personal portfolio website designed to showcase my skills, exp
 
 ### Challenges faced:
 
-- Framer Motion animations, while functional, didn’t meet my initial expectations in terms of visual impact. Fine-tuning the animations for better consistency and fluidity proved challenging.
+- Framer Motion animations, while functional, didn’t meet my initial expectations in terms of visual impact. Fine-tuning the animations for better consistency and fluidity proved challenging. The final product was not up to standards, so it has been shelved for now.
 
 - Deploying the website introduced some hurdles, particularly due to import errors due to assets in /src that were not built with the production build that required debugging. Imports were changed and now follow Vite / React best practices.
 
