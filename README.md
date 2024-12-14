@@ -11,7 +11,7 @@ This is my portfolio made with React, a complete showing of all the projects and
 
 ## Hosted Version
 
-[Deployed Version (Click Me)](joedev.co.uk)
+[Deployed Version (Click Me)](https://joedev.co.uk/))
 
 ## Tech Stack
 
