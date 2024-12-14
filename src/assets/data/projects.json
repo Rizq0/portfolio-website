@@ -73,6 +73,7 @@
       "TypeScript",
       "TailwindCSS",
       "Vite",
+      "EmailJS",
       "React Hot Toast"
     ],
     "link": "http://www.joedev.co.uk/",

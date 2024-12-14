@@ -35,7 +35,9 @@ This project not only strengthened my technical skills in web development and de
 - TypeScript
 - TailwindCSS
 - Vite
+- EmailJS
 - React Hot Toast
+- GitHub Pages (Hosting)
 
 ## Planned Features
 
