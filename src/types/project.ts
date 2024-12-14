@@ -5,6 +5,6 @@ export interface Project {
   technologies: string[];
   link: string;
   image: string;
-  respository: string;
+  repository: string;
   state: string;
 }

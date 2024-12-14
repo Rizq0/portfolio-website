@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const IndividualProject: React.FC<Props> = ({ project }) => {
-  const { name, description, technologies, link, respository, image } = project;
+  const { name, description, technologies, link, repository, image } = project;
 
   return (
     <div className="relative flex flex-col p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg min-h-[375px]">
@@ -69,7 +69,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
           )}
           <a
             className="text-backgrounddark hover:text-button dark:text-backgroundlight dark:hover:text-button"
-            href={respository}
+            href={repository}
             target="_blank"
           >
             <svg

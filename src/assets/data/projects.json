@@ -13,17 +13,17 @@
     ],
     "link": "https://joe-b-nc-news.onrender.com/api",
     "image": "https://github.com/Rizq0/be-nc-news/blob/main/misc/be-demo.gif?raw=true",
-    "respository": "https://github.com/Rizq0/be-nc-news",
+    "repository": "https://github.com/Rizq0/be-nc-news",
     "state": "Live"
   },
   {
     "id": 2,
     "name": "Northcoders Frontend - NC News",
-    "description": "This project is a dynamic frontend designed to provide users with an engaging and intuitive interface for the nc-news-backend-api. With functionality of the components being prioritised during development.",
+    "description": "This project is a dynamic frontend designed to provide users with an engaging and intuitive interface for the NC News - Backend API. With functionality of the components being prioritised during development.",
     "technologies": ["React", "Vite", "Lottie", "Axios", "JavaScript"],
     "link": "https://nc-news-joeb.netlify.app/",
     "image": "https://github.com/Rizq0/fe-nc-news/blob/main/plan/wanadQ7.gif?raw=true",
-    "respository": "https://github.com/Rizq0/fe-nc-news",
+    "repository": "https://github.com/Rizq0/fe-nc-news",
     "state": "Live"
   },
   {
@@ -33,17 +33,17 @@
     "technologies": ["React", "Leaflet", "Vite", "Axios", "JavaScript"],
     "link": "",
     "image": "https://github.com/Rizq0/meteor-map/blob/main/src/assets/meteor-demo.gif?raw=true",
-    "respository": "https://github.com/Rizq0/meteor-map",
+    "repository": "https://github.com/Rizq0/meteor-map",
     "state": "WIP"
   },
   {
     "id": 4,
     "name": "Playd - Find A DJ",
-    "description": "This apps helps DJs find clients, and music lovers to find the perfect sound for their event. It's like Tinder - but for music.",
+    "description": "This app helps DJs find clients, and music lovers to find the perfect sound for their event. It's like Tinder - but for music.",
     "technologies": ["React Native", "Expo", "Firebase", "TypeScript"],
     "link": "https://northcoders.com/project-phase/playd",
     "image": "https://i.imgur.com/zv1MKB2.png",
-    "respository": "https://github.com/Dimeben/playd",
+    "repository": "https://github.com/Dimeben/playd",
     "state": "Live"
   },
   {
@@ -61,7 +61,7 @@
     ],
     "link": "",
     "image": "https://i.imgur.com/9uytpbm.png",
-    "respository": "https://github.com/Lost-in-the-Idea/tier-list-creator",
+    "repository": "https://github.com/Lost-in-the-Idea/tier-list-creator",
     "state": "WIP"
   },
   {
@@ -77,7 +77,7 @@
     ],
     "link": "http://www.joedev.co.uk/",
     "image": "https://github.com/Rizq0/portfolio-website/blob/main/docs/demo.gif?raw=true",
-    "respository": "https://github.com/Rizq0/portfolio-website",
+    "repository": "https://github.com/Rizq0/portfolio-website",
     "state": "Live"
   }
 ]
