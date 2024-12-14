@@ -1,5 +1,6 @@
 import React from "react";
 import toast from "react-hot-toast";
+import cvUrl from "../assets/Joe Brown CV PDF NC.pdf";
 
 export const Header: React.FC = () => {
   const [darkMode, setDarkMode] = React.useState(true);
@@ -30,7 +31,7 @@ export const Header: React.FC = () => {
   const handleDownload = () => {
     if (confirm("Are you sure you want to download this file?")) {
       const link = document.createElement("a");
-      link.href = "src/assets/Joe Brown CV PDF NC.pdf";
+      link.href = cvUrl;
       link.download = "Joe Brown - CV 2024.pdf";
       document.body.appendChild(link);
       link.click();
