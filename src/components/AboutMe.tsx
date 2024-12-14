@@ -20,9 +20,9 @@ export const AboutMe: React.FC = () => {
         <span className="text-button">Full Stack Developer</span> with a solid
         foundation in web development and expertise in both frontend and backend
         technologies. A quick learner and team player, I’m always eager to
-        enhance my skills and explore new technologies. Excited to collaborate
-        on innovative projects, I’m currently seeking new opportunities. Feel
-        free to reach out!
+        explore new tools, frameworks, and technologies that can enhance my
+        skills. I’m currently seeking new opportunities to contribute my skills
+        and grow further in the tech industry. Feel free to reach out!
       </p>
     </div>
   );
