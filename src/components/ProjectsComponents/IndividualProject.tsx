@@ -46,7 +46,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
         <div className="flex flex-row justify-end gap-4 mt-auto">
           {link === "" ? null : (
             <a
-              className="text-backgrounddark hover:text-button dark:text-button dark:hover:text-backgroundlight"
+              className="text-backgrounddark hover:text-button dark:text-backgroundlight dark:hover:text-button"
               href={link}
               target="_blank"
             >
@@ -68,7 +68,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
             </a>
           )}
           <a
-            className="text-backgrounddark hover:text-button dark:text-button dark:hover:text-backgroundlight"
+            className="text-backgrounddark hover:text-button dark:text-backgroundlight dark:hover:text-button"
             href={respository}
             target="_blank"
           >
