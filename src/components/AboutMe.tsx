@@ -3,7 +3,7 @@ import selfUrl from "../assets/images/selfimage.png";
 
 export const AboutMe: React.FC = () => {
   return (
-    <div className="flex flex-col items-center max-w-[1920px] flex-wrap w-full pt-4">
+    <div className="flex flex-col items-center max-w-[1920px] flex-wrap w-full pt-4 mt-8">
       <div className=" w-[250px] h-[250px] rounded-full overflow-hidden border-solid border-4 border-backgrounddark dark:border-headlinedark">
         <img
           src={selfUrl}
