@@ -67,7 +67,7 @@
   {
     "id": 6,
     "name": "Portfolio Website",
-    "description": "A complete showing of all the projects and skills I have developed since my studies.",
+    "description": "This project is a personal portfolio website designed to showcase my skills, experience, and projects in a clean and engaging way.",
     "technologies": [
       "React",
       "TypeScript",
