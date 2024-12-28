@@ -16,7 +16,7 @@ export const AboutMe: React.FC = () => {
         Hello! I'm{" "}
         <span className="text-button font-gabarito font-medium">Joe!</span>
       </h2>
-      <p className="dark:text-headlinedark text-subheadlinelight font-gabarito text-2xl text-center pt-4">
+      <p className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-2xl text-center pt-4">
         I’m a passionate{" "}
         <span className="text-button">Full Stack Developer</span> with a solid
         foundation in web development and expertise in both frontend and backend
