@@ -184,10 +184,10 @@ export const Header: React.FC = () => {
           </ul>
         </nav>
         <div className="text-center pt-4 sm:pt-0">
-          <h1 className="text-headlinelight dark:text-headlinedark font-gabarito text-5xl">
+          <h1 className="text-headlinelight dark:text-headlinedark font-gabarito font-medium text-5xl">
             Joe Brown
           </h1>
-          <h2 className="text-button font-gabarito text-2xl">
+          <h2 className="text-button font-gabarito font-medium text-2xl">
             Junior Software Developer
           </h2>
         </div>

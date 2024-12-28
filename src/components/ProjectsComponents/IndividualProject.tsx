@@ -20,22 +20,22 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
         }}
       />
       <div className="relative z-10 flex flex-col h-full gap-4">
-        <h2 className="text-headlinelight dark:text-headlinedark font-gabarito text-2xl">
+        <h2 className="text-headlinelight dark:text-headlinedark font-gabarito font-medium text-2xl">
           {name}
         </h2>
         <div>
-          <p className="text-headlinelight dark:text-buttontext">
+          <p className="text-headlinelight dark:text-buttontext text-lg font-gabarito">
             {description}
           </p>
           <div>
-            <h3 className="text-headlinelight dark:text-headlinedark font-gabarito text-2xl mt-2">
+            <h3 className="text-headlinelight dark:text-headlinedark font-gabarito font-medium text-2xl mt-4">
               Technologies
             </h3>
             <ul className="list-disc list-inside text-subheadlinelight dark:text-paragraphdark flex flex-row flex-wrap">
               {technologies.map((technology) => (
                 <li
                   key={technology}
-                  className="list-none mr-2 my-2 rounded-full bg-button dark:text-buttontext px-3"
+                  className="list-none mr-2 my-2 rounded-full bg-button dark:text-buttontext font-gabarito font-medium px-3 text-lg"
                 >
                   {technology}
                 </li>

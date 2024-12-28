@@ -32,7 +32,7 @@ export const ContactMe: React.FC = () => {
     <div className="flex flex-col">
       <h1
         id="contact"
-        className="text-headlinelight underline underline-offset-4 md:no-underline dark:text-headlinedark font-gabarito text-4xl self-center md:self-start pb-4"
+        className="text-headlinelight md:no-underline dark:text-headlinedark font-gabarito font-medium text-4xl self-center md:self-start mb-12 md:mb-12"
       >
         Contact Me
       </h1>
@@ -70,7 +70,7 @@ export const ContactMe: React.FC = () => {
         />
         <button
           type="submit"
-          className="bg-button text-headlinelight dark:text-buttontext font-gabarito text-xl p-2 rounded-lg mt-2 self-center dark:hover:text-headlinelight hover:text-buttontext"
+          className="bg-button text-headlinelight dark:text-buttontext font-gabarito font-medium text-xl p-2 rounded-lg mt-2 self-center dark:hover:text-headlinelight hover:text-buttontext"
         >
           Send Message
         </button>
