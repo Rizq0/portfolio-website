@@ -31,10 +31,10 @@
     "name": "Meteorite Tracking Map",
     "description": "This small scale project is a web-based tool designed to display an interactive map showing currently known meteorite landings from the NASA API.",
     "technologies": ["React", "Leaflet", "Vite", "Axios", "JavaScript"],
-    "link": "",
+    "link": "https://meteorite-map.netlify.app/",
     "image": "https://github.com/Rizq0/meteor-map/blob/main/src/assets/meteor-demo.gif?raw=true",
     "repository": "https://github.com/Rizq0/meteor-map",
-    "state": "WIP"
+    "state": "Live"
   },
   {
     "id": 4,
