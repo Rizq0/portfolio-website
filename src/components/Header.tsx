@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 import cvUrl from "../assets/Joe Brown CV PDF NC.pdf";
+import { Theme } from "../types/header";
+
+const initialiseTheme = () => {
+  try {
+    const currentTheme = localStorage.getItem("theme");
+    if (!currentTheme) {
+      localStorage.setItem("theme", "dark");
+    }
+    return currentTheme || "dark";
+  } catch (error) {
+    console.warn("Failed to initialise theme", error);
+    return "dark";
+  }
+};
 
 export const Header: React.FC = () => {
-  const [darkMode, setDarkMode] = React.useState(true);
+  const [darkMode, setDarkMode] = React.useState(() => {
+    const theme = initialiseTheme() as Theme;
+    return theme === "dark";
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+  }, [darkMode]);
+
   const toggleDarkMode = () => {
-    document.documentElement.classList.toggle("dark");
-    setDarkMode(!darkMode);
-    if (!darkMode) {
+    const newDarkModeState = !darkMode;
+    if (newDarkModeState) {
       toast("My old friend!", {
         icon: "🌚",
         style: {
@@ -17,7 +38,7 @@ export const Header: React.FC = () => {
         },
       });
     } else {
-      toast("Let there be Light!", {
+      toast("Let there be light!", {
         icon: "🌞",
         style: {
           borderRadius: "10px",
@@ -26,13 +47,15 @@ export const Header: React.FC = () => {
         },
       });
     }
+    localStorage.setItem("theme", newDarkModeState ? "dark" : "light");
+    setDarkMode(newDarkModeState);
   };
 
   const handleDownload = () => {
     if (confirm("Are you sure you want to download this file?")) {
       const link = document.createElement("a");
       link.href = cvUrl;
-      link.download = "Joe Brown - CV 2024.pdf";
+      link.download = "Joe Brown - CV 2025.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
