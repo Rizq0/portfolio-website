@@ -1,6 +1,6 @@
 import React from "react";
 import projectsData from "../assets/data/projects.json";
-import { IndividualProject } from "./ProjectsComponents/IndividualProject";
+import { IndividualProject } from "./projects-components/IndividualProject";
 import { Project } from "../types/project";
 
 export const Projects: React.FC = () => {

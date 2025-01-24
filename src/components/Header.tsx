@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 import cvUrl from "../assets/Joe Brown CV PDF NC.pdf";
 import { Theme } from "../types/header";
+import { useMantineColorScheme } from "@mantine/core";
 
 const initialiseTheme = () => {
   try {
@@ -17,6 +18,7 @@ const initialiseTheme = () => {
 };
 
 export const Header: React.FC = () => {
+  const { toggleColorScheme } = useMantineColorScheme();
   const [darkMode, setDarkMode] = React.useState(() => {
     const theme = initialiseTheme() as Theme;
     return theme === "dark";
@@ -47,6 +49,7 @@ export const Header: React.FC = () => {
         },
       });
     }
+    toggleColorScheme();
     localStorage.setItem("theme", newDarkModeState ? "dark" : "light");
     setDarkMode(newDarkModeState);
   };
