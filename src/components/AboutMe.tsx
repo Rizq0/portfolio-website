@@ -15,7 +15,6 @@ import { useState, useEffect } from "react";
 export const AboutMe: React.FC = () => {
   const [activeValue, setActiveValue] = useState<string | null>(null);
   const [mountKey, setMountKey] = useState(0);
-  console.log(mountKey);
 
   useEffect(() => {
     if (activeValue === "Skills") {
