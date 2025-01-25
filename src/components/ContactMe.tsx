@@ -39,27 +39,27 @@ export const ContactMe: React.FC = () => {
           type="text"
           name="from_name"
           placeholder="Your Name"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button font-gabarito text-lg"
+          className="dark:text-headlinelight p-2 rounded-lg border-2 dark:bg-backgroundlight bg-backgrounddark text-headlinedark hover:border-button font-gabarito text-lg"
           required
         />
         <input
           type="email"
           name="user_email"
           placeholder="Your Email"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button font-gabarito text-lg"
+          className="dark:text-headlinelight p-2 rounded-lg border-2 dark:bg-backgroundlight bg-backgrounddark text-headlinedark hover:border-button font-gabarito text-lg"
           required
         />
         <input
           type="text"
           name="company"
           placeholder="Company Name"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button font-gabarito text-lg"
+          className="dark:text-headlinelight p-2 rounded-lg border-2 dark:bg-backgroundlight bg-backgrounddark text-headlinedark hover:border-button font-gabarito text-lg"
           required
         />
         <textarea
           name="message"
           placeholder="Your Message"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark h-40 min-h-[48px] max-h-[250px] hover:border-button font-gabarito text-lg"
+          className="dark:text-headlinelight p-2 rounded-lg border-2 dark:bg-backgroundlight bg-backgrounddark text-headlinedark h-40 min-h-[48px] max-h-[250px] hover:border-button font-gabarito text-lg"
           required
         />
         <button

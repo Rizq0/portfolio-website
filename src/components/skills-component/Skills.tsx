@@ -42,7 +42,6 @@ export const Skills: React.FC = () => {
 
   return (
     <Carousel
-      withIndicators
       slideSize={{ base: "100%", sm: "50%" }}
       slideGap={{ base: "xl", sm: "md" }}
       align="start"
@@ -50,15 +49,15 @@ export const Skills: React.FC = () => {
     >
       {slides.map((slide) => (
         <Carousel.Slide key={slide.title}>
-          <div className="p-4 h-full text-center border-2 border-headlinelight dark:border-headlinedark rounded-lg">
-            <h1 className="text-button font-medium text-lg sm:text-2xl">
+          <div className="p-4 h-full text-center rounded-lg dark:bg-backgroundlight bg-backgrounddark">
+            <h1 className="text-button font-medium text-lg sm:text-xl">
               {slide.title}
             </h1>
             <ul>
               {slide.items.map((item: string) => (
                 <li
                   key={item}
-                  className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg sm:text-2xl"
+                  className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg sm:text-xl"
                 >
                   {item}
                 </li>

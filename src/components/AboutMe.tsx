@@ -33,10 +33,12 @@ export const AboutMe: React.FC = () => {
           style={{ objectPosition: "center -75%" }}
         />
       </div>
-      <h2 className="text-headlinelight dark:text-headlinedark font-gabarito font-medium text-4xl pt-8">
-        Hello! I'm{" "}
-        <span className="text-button font-gabarito font-medium">Joe!</span>
-      </h2>
+      <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4 mt-8">
+        <h2 className="text-headlinedark dark:text-headlinelight font-gabarito font-medium text-4xl">
+          Hello! I'm{" "}
+          <span className="text-button font-gabarito font-medium">Joe!</span>
+        </h2>
+      </div>
       <hr className="text-button mt-12 mb-12 border-t-[4px] rounded w-full" />
       <Accordion
         value={activeValue}
@@ -60,16 +62,18 @@ export const AboutMe: React.FC = () => {
           </Accordion.Control>
           <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
             {
-              <p className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg text-center sm:text-2xl">
-                I’m a passionate{" "}
-                <span className="text-button">Full Stack Developer</span> with a
-                solid foundation in web development and expertise in both
-                frontend and backend technologies. A quick learner and team
-                player, I’m always eager to explore new tools, frameworks, and
-                technologies that can enhance my skills. I’m currently seeking
-                new opportunities to contribute my skills and grow further in
-                the tech industry. Feel free to reach out!
-              </p>
+              <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4">
+                <p className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg text-center sm:text-2xl">
+                  I’m a passionate{" "}
+                  <span className="text-button">Full Stack Developer</span> with
+                  a solid foundation in web development and expertise in both
+                  frontend and backend technologies. A quick learner and team
+                  player, I’m always eager to explore new tools, frameworks, and
+                  technologies that can enhance my skills. I’m currently seeking
+                  new opportunities to contribute my skills and grow further in
+                  the tech industry. Feel free to reach out!
+                </p>
+              </div>
             }
           </Accordion.Panel>
         </Accordion.Item>
