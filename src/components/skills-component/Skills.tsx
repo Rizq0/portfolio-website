@@ -44,7 +44,7 @@ export const Skills: React.FC = () => {
     <Carousel
       withIndicators
       slideSize={{ base: "100%", sm: "50%" }}
-      slideGap={{ base: "xl", sm: 2 }}
+      slideGap={{ base: "xl", sm: "md" }}
       align="start"
       slidesToScroll={1}
     >
