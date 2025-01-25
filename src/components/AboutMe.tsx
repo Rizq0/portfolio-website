@@ -10,8 +10,21 @@ import {
   IconMailSpark,
 } from "@tabler/icons-react";
 import { Skills } from "./skills-component/Skills";
+import { useState, useEffect } from "react";
 
 export const AboutMe: React.FC = () => {
+  const [isSkillsOpen, setIsSkillsOpen] = useState(false);
+  const [skillsKey, setSkillsKey] = useState(0);
+
+  useEffect(() => {
+    if (isSkillsOpen) {
+      const timer = setTimeout(() => {
+        setSkillsKey((prev) => prev + 1);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isSkillsOpen]);
+
   return (
     <div className="flex flex-col items-center flex-wrap w-full pt-4 mt-8">
       <div className=" w-[250px] h-[250px] rounded-full overflow-hidden border-solid border-4 border-backgrounddark dark:border-headlinedark">
@@ -67,12 +80,13 @@ export const AboutMe: React.FC = () => {
         >
           <Accordion.Control
             icon={<IconBinaryTree size={48} />}
-            className="dark:bg-backgrounddark bg-backgroundlight text-4xl hover:text-button font-gabarito dark:text-headlinedark text-headlinelight "
+            className="dark:bg-backgrounddark bg-backgroundlight text-4xl hover:text-button font-gabarito dark:text-headlinedark text-headlinelight"
+            onClick={() => setIsSkillsOpen((toggle) => !toggle)}
           >
             Skills
           </Accordion.Control>
           <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
-            {<Skills />}
+            {isSkillsOpen && <Skills key={skillsKey} />}
           </Accordion.Panel>
         </Accordion.Item>
         <Accordion.Item
