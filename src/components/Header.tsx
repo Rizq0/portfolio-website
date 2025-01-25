@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 import cvUrl from "../assets/Joe Brown CV PDF NC.pdf";
 import { Theme } from "../types/header";
-import { useMantineColorScheme } from "@mantine/core";
+import { Modal, useMantineColorScheme } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { ContactMe } from "./ContactMe";
 
 const initialiseTheme = () => {
   try {
@@ -18,6 +20,7 @@ const initialiseTheme = () => {
 };
 
 export const Header: React.FC = () => {
+  const [opened, { open, close }] = useDisclosure(false);
   const { toggleColorScheme } = useMantineColorScheme();
   const [darkMode, setDarkMode] = React.useState(() => {
     const theme = initialiseTheme() as Theme;
@@ -67,6 +70,16 @@ export const Header: React.FC = () => {
 
   return (
     <header className="w-full">
+      <Modal
+        opened={opened}
+        onClose={close}
+        title="Contact Me"
+        centered
+        lockScroll={false}
+        className="font-gabarito text-lg dark:text-headlinedark text-headlinelight max-w-lg"
+      >
+        <ContactMe />
+      </Modal>
       <div className="h-32 mx-auto flex justify-around md:justify-between items-center flex-wrap w-full pt-4 md:pt-0">
         <nav>
           <ul className="flex space-x-4">
@@ -144,9 +157,9 @@ export const Header: React.FC = () => {
               </a>
             </li>
             <li className="flex items-center justify-center flex-grow">
-              <a
+              <button
                 className="text-backgrounddark hover:text-button dark:text-backgroundlight"
-                href="#contact"
+                onClick={open}
                 title="Contact Me"
               >
                 <svg
@@ -163,7 +176,7 @@ export const Header: React.FC = () => {
                   <path d="M10 14l11 -11"></path>
                   <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
                 </svg>
-              </a>
+              </button>
             </li>
             <li className="flex items-center justify-center flex-grow">
               <button

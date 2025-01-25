@@ -74,7 +74,8 @@
       "TailwindCSS",
       "Vite",
       "EmailJS",
-      "React Hot Toast"
+      "React Hot Toast",
+      "Mantine"
     ],
     "link": "http://www.joedev.co.uk/",
     "image": "https://github.com/Rizq0/portfolio-website/blob/main/docs/demo.gif?raw=true",

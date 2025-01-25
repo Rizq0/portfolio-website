@@ -37,6 +37,8 @@ This project not only strengthened my technical skills in web development and de
 - Vite
 - EmailJS
 - React Hot Toast
+- Mantine
+- Tabler Icons
 - GitHub Pages (Hosting)
 - Framer Motion (Functions Created - Not Used)
 

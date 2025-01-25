@@ -30,12 +30,6 @@ export const ContactMe: React.FC = () => {
 
   return (
     <div className="flex flex-col">
-      <h1
-        id="contact"
-        className="text-headlinelight md:no-underline dark:text-headlinedark font-gabarito font-medium text-4xl self-center md:self-start mb-12 md:mb-12"
-      >
-        Contact Me
-      </h1>
       <form
         ref={form}
         onSubmit={handleSubmit}
@@ -45,27 +39,27 @@ export const ContactMe: React.FC = () => {
           type="text"
           name="from_name"
           placeholder="Your Name"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button"
+          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button font-gabarito text-lg"
           required
         />
         <input
           type="email"
           name="user_email"
           placeholder="Your Email"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button"
+          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button font-gabarito text-lg"
           required
         />
         <input
           type="text"
           name="company"
           placeholder="Company Name"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button"
+          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark hover:border-button font-gabarito text-lg"
           required
         />
         <textarea
           name="message"
           placeholder="Your Message"
-          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark h-40 min-h-[48px] max-h-[250px] hover:border-button"
+          className="dark:text-headlinedark p-2 rounded border-2 dark:bg-backgrounddark dark:border-headlinedark h-40 min-h-[48px] max-h-[250px] hover:border-button font-gabarito text-lg"
           required
         />
         <button
