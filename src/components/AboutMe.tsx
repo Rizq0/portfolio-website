@@ -9,7 +9,7 @@ import {
   IconTimelineEventExclamation,
   IconMailSpark,
 } from "@tabler/icons-react";
-import Skills from "./skills-component/Skills";
+import { Skills } from "./skills-component/Skills";
 
 export const AboutMe: React.FC = () => {
   return (

@@ -1,8 +1,9 @@
-import React from "react";
+import { Carousel } from "@mantine/carousel";
+import "@mantine/carousel/styles.css";
 import skillsData from "../../assets/data/skills.json";
 import { SkillsType } from "../../types/skills";
 
-const Skills: React.FC = () => {
+export const Skills: React.FC = () => {
   const {
     languages,
     frameworks,
@@ -12,102 +13,60 @@ const Skills: React.FC = () => {
     certifications,
   } = skillsData as SkillsType;
 
-  console.log(languages, databases, cloud, versionControl, certifications);
+  const slides = [
+    {
+      title: "Languages",
+      items: languages,
+    },
+    {
+      title: "Frameworks & Libraries",
+      items: frameworks,
+    },
+    {
+      title: "Databases & Data Management",
+      items: databases,
+    },
+    {
+      title: "Cloud & Infrastructure",
+      items: cloud,
+    },
+    {
+      title: "Version Control",
+      items: versionControl,
+    },
+    {
+      title: "Certifications",
+      items: certifications,
+    },
+  ];
 
   return (
-    <div className="text-center font-gabarito grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div className="p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg min-h-[375px]">
-        <h1 className="text-button font-medium text-lg sm:text-2xl">
-          Languages
-        </h1>
-        <ul>
-          {languages.map((language: string) => (
-            <li
-              key={language}
-              className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg sm:text-2xl"
-            >
-              {language}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg min-h-[375px]">
-        <h1 className="text-button font-medium text-lg sm:text-2xl">
-          Frameworks & Libraries
-        </h1>
-        <ul>
-          {frameworks.map((framework: string) => (
-            <li
-              key={framework}
-              className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg sm:text-2xl"
-            >
-              {framework}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg min-h-[375px]">
-        <h1 className="text-button font-medium text-lg sm:text-2xl">
-          Databases & Data Management
-        </h1>
-        <ul>
-          {databases.map((database: string) => (
-            <li
-              key={database}
-              className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg sm:text-2xl"
-            >
-              {database}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg min-h-[375px]">
-        <h1 className="text-button font-medium text-lg sm:text-2xl">
-          Cloud & Infrastructure
-        </h1>
-        <ul>
-          {cloud.map((clouditem: string) => (
-            <li
-              key={clouditem}
-              className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg sm:text-2xl"
-            >
-              {clouditem}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg min-h-[375px]">
-        <h1 className="text-button font-medium text-lg sm:text-2xl">
-          Version Control
-        </h1>
-        <ul>
-          {versionControl.map((versionitem: string) => (
-            <li
-              key={versionitem}
-              className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg sm:text-2xl"
-            >
-              {versionitem}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg">
-        <h1 className="text-button font-medium text-lg sm:text-2xl">
-          Certifications
-        </h1>
-        <ul>
-          {certifications.map((certification: string) => (
-            <li
-              key={certification}
-              className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg sm:text-2xl"
-            >
-              {certification}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <Carousel
+      withIndicators
+      slideSize={{ base: "100%", sm: "50%" }}
+      slideGap={{ base: "xl", sm: 2 }}
+      align="start"
+      slidesToScroll={1}
+    >
+      {slides.map((slide) => (
+        <Carousel.Slide key={slide.title}>
+          <div className="p-4 h-full text-center">
+            <h1 className="text-button font-medium text-lg sm:text-2xl">
+              {slide.title}
+            </h1>
+            <ul>
+              {slide.items.map((item: string) => (
+                <li
+                  key={item}
+                  className="dark:text-headlinedark text-subheadlinelight font-gabarito font-medium text-lg sm:text-2xl"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Carousel.Slide>
+      ))}
+    </Carousel>
   );
 };
-
-export default Skills;
