@@ -17,12 +17,10 @@ export const AboutMe: React.FC = () => {
   const [skillsKey, setSkillsKey] = useState(0);
 
   useEffect(() => {
-    if (isSkillsOpen) {
-      const timer = setTimeout(() => {
-        setSkillsKey((prev) => prev + 1);
-      }, 100);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => {
+      setSkillsKey((prev) => prev + 1);
+    }, 300);
+    return () => clearTimeout(timer);
   }, [isSkillsOpen]);
 
   return (

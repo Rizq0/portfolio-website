@@ -50,7 +50,7 @@ export const Skills: React.FC = () => {
     >
       {slides.map((slide) => (
         <Carousel.Slide key={slide.title}>
-          <div className="p-4 h-full text-center">
+          <div className="p-4 h-full text-center border-2 border-headlinelight dark:border-headlinedark rounded-lg">
             <h1 className="text-button font-medium text-lg sm:text-2xl">
               {slide.title}
             </h1>
