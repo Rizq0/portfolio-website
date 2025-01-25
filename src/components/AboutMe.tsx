@@ -11,17 +11,26 @@ import {
 } from "@tabler/icons-react";
 import { Skills } from "./skills-component/Skills";
 import { useState, useEffect } from "react";
+import { CarouselProjects } from "./projects-components/CarouselProjects";
 
 export const AboutMe: React.FC = () => {
   const [activeValue, setActiveValue] = useState<string | null>(null);
   const [mountKey, setMountKey] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    if (activeValue === "Skills") {
+    if (activeValue === "Skills" || activeValue === "Projects") {
       setMountKey((prev) => prev + 1);
       window.dispatchEvent(new Event("resize"));
     }
   }, [activeValue]);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="flex flex-col items-center flex-wrap w-full pt-4 mt-8">
@@ -104,7 +113,11 @@ export const AboutMe: React.FC = () => {
             Projects
           </Accordion.Control>
           <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
-            <Projects />
+            {windowWidth < 768 ? (
+              <CarouselProjects key={mountKey} />
+            ) : (
+              <Projects />
+            )}
           </Accordion.Panel>
         </Accordion.Item>
         <Accordion.Item
