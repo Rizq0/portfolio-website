@@ -1,0 +1,24 @@
+{
+  "languages": ["JavaScript", "TypeScript", "Go", "HTML", "CSS"],
+  "frameworks": [
+    "Node.js",
+    "React",
+    "Express",
+    "Gin",
+    "GORM",
+    "Vite",
+    "TaillwindCSS",
+    "Jest",
+    "Mantine",
+    "Supertest",
+    "Leaflet",
+    "React Hot Toast"
+  ],
+  "databases": ["SQL", "PSQL", "PostgreSQL", "SQLite", "Firebase", "Supabase"],
+  "cloud": ["AWS - S3, EC2, IAM", "Netlify", "Render"],
+  "versionControl": ["Git", "GitHub"],
+  "certifications": [
+    "AWS Certified Cloud Practitioner - In Progress",
+    "Northcoders Software Development Bootcamp - Completed"
+  ]
+}

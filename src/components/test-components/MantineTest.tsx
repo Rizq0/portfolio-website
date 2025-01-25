@@ -3,7 +3,13 @@ import { Card, Text, Badge, Button, Group } from "@mantine/core";
 export const MantineTest: React.FC = () => {
   return (
     <>
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
+      <Card
+        shadow="sm"
+        padding="lg"
+        radius="md"
+        withBorder
+        className="dark:bg-backgrounddark bg-backgroundlight"
+      >
         <Group justify="space-between" mt="md" mb="xs">
           <Text fw={500}>Mantine Test Card</Text>
           <Badge color="pink" variant="light">
