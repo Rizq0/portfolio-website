@@ -13,15 +13,16 @@ import { Skills } from "./skills-component/Skills";
 import { useState, useEffect } from "react";
 
 export const AboutMe: React.FC = () => {
-  const [isSkillsOpen, setIsSkillsOpen] = useState(false);
-  const [skillsKey, setSkillsKey] = useState(0);
+  const [activeValue, setActiveValue] = useState<string | null>(null);
+  const [mountKey, setMountKey] = useState(0);
+  console.log(mountKey);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setSkillsKey((prev) => prev + 1);
-    }, 300);
-    return () => clearTimeout(timer);
-  }, [isSkillsOpen]);
+    if (activeValue === "Skills") {
+      setMountKey((prev) => prev + 1);
+      window.dispatchEvent(new Event("resize"));
+    }
+  }, [activeValue]);
 
   return (
     <div className="flex flex-col items-center flex-wrap w-full pt-4 mt-8">
@@ -39,6 +40,8 @@ export const AboutMe: React.FC = () => {
       </h2>
       <hr className="text-button mt-12 mb-12 border-t-[4px] rounded w-full" />
       <Accordion
+        value={activeValue}
+        onChange={setActiveValue}
         variant="separated"
         radius="md"
         chevronPosition="left"
@@ -79,12 +82,11 @@ export const AboutMe: React.FC = () => {
           <Accordion.Control
             icon={<IconBinaryTree size={48} />}
             className="dark:bg-backgrounddark bg-backgroundlight text-4xl hover:text-button font-gabarito dark:text-headlinedark text-headlinelight"
-            onClick={() => setIsSkillsOpen((toggle) => !toggle)}
           >
             Skills
           </Accordion.Control>
           <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
-            {isSkillsOpen && <Skills key={skillsKey} />}
+            {<Skills key={mountKey} />}
           </Accordion.Panel>
         </Accordion.Item>
         <Accordion.Item
