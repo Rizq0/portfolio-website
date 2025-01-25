@@ -77,6 +77,10 @@ export const Header: React.FC = () => {
         centered
         lockScroll={false}
         className="font-gabarito text-lg dark:text-headlinedark text-headlinelight max-w-lg"
+        classNames={{
+          body: "bg-backgroundlight dark:bg-backgrounddark",
+          header: "bg-backgroundlight dark:bg-backgrounddark",
+        }}
       >
         <ContactMe />
       </Modal>
