@@ -45,3 +45,4 @@ This project not only strengthened my technical skills in web development and de
 ## Planned Features
 
 - React Transition Group / React Intersection Observer Implementation
+- Improvement of dark / light mode colours, specifically shading on components
