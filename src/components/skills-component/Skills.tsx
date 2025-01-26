@@ -2,6 +2,14 @@ import { Carousel } from "@mantine/carousel";
 import "@mantine/carousel/styles.css";
 import skillsData from "../../assets/data/skills.json";
 import { SkillsType } from "../../types/skills";
+import {
+  IconBrandTypescript,
+  IconKeyframes,
+  IconDatabaseCog,
+  IconCloudCheck,
+  IconGitBranch,
+  IconCertificate,
+} from "@tabler/icons-react";
 
 export const Skills: React.FC = () => {
   const {
@@ -17,26 +25,32 @@ export const Skills: React.FC = () => {
     {
       title: "Languages",
       items: languages,
+      icon: IconBrandTypescript,
     },
     {
       title: "Frameworks & Libraries",
       items: frameworks,
+      icon: IconKeyframes,
     },
     {
       title: "Databases & Data Management",
       items: databases,
+      icon: IconDatabaseCog,
     },
     {
       title: "Cloud & Infrastructure",
       items: cloud,
+      icon: IconCloudCheck,
     },
     {
       title: "Version Control",
       items: versionControl,
+      icon: IconGitBranch,
     },
     {
       title: "Certifications",
       items: certifications,
+      icon: IconCertificate,
     },
   ];
 
@@ -49,19 +63,27 @@ export const Skills: React.FC = () => {
     >
       {slides.map((slide) => (
         <Carousel.Slide key={slide.title}>
-          <div className="p-4 h-full text-center rounded-lg dark:bg-backgroundlight bg-backgrounddark">
-            <h1 className="text-button font-medium text-lg sm:text-xl">
-              {slide.title}
-            </h1>
+          <div className="flex flex-col justify-start dark:bg-backgroundlight bg-backgrounddark p-4 h-full rounded-lg">
+            <div className="text-center w-full flex flex-row justify-between items-center">
+              <h1 className="text-button font-medium text-2xl">
+                {slide.title}
+              </h1>
+              <slide.icon
+                size={48}
+                className="dark:text-headlinelight text-headlinedark"
+              />
+            </div>
             <ul>
-              {slide.items.map((item: string) => (
-                <li
-                  key={item}
-                  className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg sm:text-xl"
-                >
-                  {item}
-                </li>
-              ))}
+              <div className="text-center w-full flex flex-row flex-wrap justify-evenly mt-4">
+                {slide.items.map((item: string) => (
+                  <li
+                    key={item}
+                    className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg sm:text-xl mx-4"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </div>
             </ul>
           </div>
         </Carousel.Slide>
