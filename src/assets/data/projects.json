@@ -28,12 +28,27 @@
   },
   {
     "id": 3,
-    "name": "Meteorite Tracking Map",
-    "description": "This small scale project is a web-based tool designed to display an interactive map showing currently known meteorite landings from the NASA API.",
-    "technologies": ["React", "Leaflet", "Vite", "Axios", "JavaScript"],
-    "link": "https://meteorite-map.netlify.app/",
-    "image": "https://github.com/Rizq0/meteor-map/blob/main/src/assets/meteor-demo.gif?raw=true",
-    "repository": "https://github.com/Rizq0/meteor-map",
+    "name": "Museum Curator - MVP / Demo",
+    "description": "A full stack web application for curating and exploring museum artwork collections. This project was built as a freelance MVP / demo for a client.",
+    "technologies": [
+      "React",
+      "Vite",
+      "React Router",
+      "TanStack Query",
+      "Axios",
+      "TailwindCSS",
+      "Shadcn/ui",
+      "Express",
+      "SQLite",
+      "Sequelize",
+      "Jest",
+      "Supertest",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "link": "https://museum-curator-web.netlify.app/",
+    "image": "https://github.com/Rizq0/museum-curator/blob/main/frontend/public/demo.gif?raw=true",
+    "repository": "https://github.com/Rizq0/museum-curator",
     "state": "Live"
   },
   {
