@@ -63,8 +63,8 @@
   },
   {
     "id": 5,
-    "name": "Tier List Creator - Work in Progress",
-    "description": "A work in progress full stack web app which will allow users to create custom tier lists.",
+    "name": "Tier List Creator - Inactive",
+    "description": "An inactive full stack web application designed to let users create custom tier lists. Originally built to explore Go as a backend. While development is currently paused, it showcases a functional backend.",
     "technologies": [
       "React",
       "Mantine",
@@ -77,7 +77,7 @@
     "link": "",
     "image": "https://i.imgur.com/9uytpbm.png",
     "repository": "https://github.com/Lost-in-the-Idea/tier-list-creator",
-    "state": "WIP"
+    "state": "Inactive"
   },
   {
     "id": 6,
