@@ -78,7 +78,10 @@ export const AboutMe: React.FC = () => {
                   a solid foundation in web development and expertise in both
                   frontend and backend technologies. A quick learner and team
                   player, I’m always eager to explore new tools, frameworks, and
-                  technologies that can enhance my skills. I’m currently seeking
+                  technologies that can enhance my skills. I also have a strong
+                  interest in <span className="text-button">DevOps</span>, and
+                  enjoy learning about infrastructure, CI/CD, and tools that
+                  help bridge development and operations. I’m currently seeking
                   new opportunities to contribute my skills and grow further in
                   the tech industry. Feel free to reach out!
                 </p>

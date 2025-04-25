@@ -9,7 +9,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
   const { name, description, technologies, link, repository, image } = project;
 
   return (
-    <div className="relative flex flex-col p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg min-h-[375px]">
+    <div className="relative flex flex-col p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg h-full w-full">
       <div
         className="absolute inset-0 z-0"
         style={{
