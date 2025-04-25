@@ -1,5 +1,6 @@
 import React from "react";
-import selfUrl from "../assets/images/selfimage.png";
+// import selfUrl from "../assets/images/selfimage.png";
+import selfPicture from "../assets/images/selfimage2.jpg";
 import { Accordion } from "@mantine/core";
 import { ContactMe } from "./ContactMe";
 import { Projects } from "./Projects";
@@ -34,12 +35,11 @@ export const AboutMe: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center flex-wrap w-full pt-4 mt-8">
-      <div className=" w-[250px] h-[250px] rounded-full overflow-hidden border-solid border-4 border-backgrounddark dark:border-headlinedark">
+      <div className=" w-[250px] h-[250px] rounded-full overflow-hidden border-solid border-2 border-backgrounddark dark:border-headlinedark">
         <img
-          src={selfUrl}
+          src={selfPicture}
           alt="Joe Self Image"
-          className="w-full h-full scale-150 object-cover"
-          style={{ objectPosition: "center -75%" }}
+          className="w-full h-full scale-100 object-cover object-center"
         />
       </div>
       <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4 mt-8">
