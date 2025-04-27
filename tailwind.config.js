@@ -24,6 +24,17 @@ export default {
       fontFamily: {
         gabarito: ["Gabarito", "sans-serif"],
       },
+      animation: {
+        orbit: "orbit 2s linear infinite",
+        "spin-slow": "spin 8s linear infinite",
+        "spin-fast": "spin 2s linear infinite",
+      },
+      keyframes: {
+        orbit: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+      },
     },
   },
   plugins: [],

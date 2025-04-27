@@ -35,12 +35,16 @@ export const AboutMe: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center flex-wrap w-full pt-4 mt-8">
-      <div className=" w-[250px] h-[250px] rounded-full overflow-hidden border-solid border-2 border-backgrounddark dark:border-headlinedark">
-        <img
-          src={selfPicture}
-          alt="Joe Self Image"
-          className="w-full h-full scale-100 object-cover object-center"
-        />
+      <div className="relative w-[266px] h-[266px]">
+        <div className="absolute inset-0 rounded-full dark:bg-button shadow-lg dark:shadow-button/50 animate-orbit bg-backgrounddark shadow-backgrounddark/50"></div>
+
+        <div className="absolute inset-[2px] w-[262px] h-[262px] rounded-full overflow-hidden bg-backgrounddark dark:bg-backgroundlight">
+          <img
+            src={selfPicture}
+            alt="Joe Self Image"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
       </div>
       <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4 mt-8">
         <h2 className="text-headlinedark dark:text-headlinelight font-gabarito font-medium text-4xl">
