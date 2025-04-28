@@ -1,0 +1,45 @@
+name: Deploy to Live Production & Build and Deploy Docker Image
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Deploy to Live Production
+        run: npm run deploy
+
+      - name: Lowercase Docker Image Name
+        id: lowercase-repo-owner
+        run: echo "REPO_OWNER=${REPO_OWNER,,}" >> $GITHUB_ENV
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/${{ env.REPO_OWNER }}/${{ github.event.repository.name }}:latest
+            ghcr.io/${{ env.REPO_OWNER }}/${{ github.event.repository.name }}:${{ github.sha }}
