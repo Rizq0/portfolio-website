@@ -51,6 +51,8 @@ VITE_EMAILJS_TEMPLATE_ID="TEMPLATE ID HERE"
 VITE_BASE_URL=/
 ```
 
+**NOTE**: Remember to also add these as repository secrets on GitHub.
+
 <br> 3. Build and run the docker container.
 
 ```
