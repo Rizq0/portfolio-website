@@ -15,7 +15,15 @@
     "React Hot Toast"
   ],
   "databases": ["SQL", "PSQL", "PostgreSQL", "SQLite", "Firebase", "Supabase"],
-  "cloud": ["AWS - S3, EC2, IAM", "Netlify", "Render"],
+  "cloud": [
+    "CI/CD",
+    "AWS - S3, EC2, IAM",
+    "Docker",
+    "Docker Compose",
+    "GitHub Actions",
+    "Netlify",
+    "Render"
+  ],
   "versionControl": ["Git", "GitHub"],
   "certifications": [
     "AWS Certified Cloud Practitioner - In Progress",
