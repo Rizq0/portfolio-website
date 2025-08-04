@@ -3,6 +3,6 @@ export interface SkillsType {
   frameworks: string[];
   databases: string[];
   cloud: string[];
-  versionControl: string[];
+  tooling: string[];
   certifications: string[];
 }

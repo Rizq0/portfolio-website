@@ -1,32 +1,65 @@
 {
-  "languages": ["JavaScript", "TypeScript", "Go", "HTML", "CSS"],
+  "languages": [
+    "JavaScript",
+    "TypeScript",
+    "C#",
+    "HTML",
+    "CSS",
+    "YAML",
+    "JSON",
+    "KQL",
+    "Bicep"
+  ],
   "frameworks": [
+    ".NET",
+    "ASP.NET Core",
+    "Entity Framework Core",
     "Node.js",
     "React",
     "Express",
+    "Sequelize",
     "Gin",
     "GORM",
     "Vite",
-    "TailwindCSS",
-    "Jest",
+    "Tailwind CSS",
     "Mantine",
+    "Jest",
     "Supertest",
-    "Leaflet",
-    "React Hot Toast"
+    "React Router",
+    "TanStack Query",
+    "Axios",
+    "React Hot Toast",
+    "Shadcn/ui"
   ],
   "databases": ["SQL", "PSQL", "PostgreSQL", "SQLite", "Firebase", "Supabase"],
   "cloud": [
-    "CI/CD",
+    "Azure",
+    "Azure DevOps",
+    "Azure CLI",
+    "Application Insights",
     "AWS - S3, EC2, IAM",
     "Docker",
     "Docker Compose",
+    "Kubernetes",
+    "CI/CD Pipelines",
     "GitHub Actions",
+    "GitHub Pages",
     "Netlify",
     "Render"
   ],
-  "versionControl": ["Git", "GitHub"],
-  "certifications": [
-    "AWS Certified Cloud Practitioner - In Progress",
-    "Northcoders Software Development Bootcamp - Completed"
-  ]
+  "tooling": [
+    "PowerShell",
+    "Bash",
+    "Git",
+    "GitHub",
+    "Azure Repos",
+    "NPM",
+    "NuGet",
+    "Visual Studio",
+    "VS Code",
+    "Postman",
+    "Confluence",
+    "Jira"
+  ],
+  "certifications": ["Northcoders Software Development Bootcamp - Completed"]
 }

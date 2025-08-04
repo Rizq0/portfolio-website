@@ -18,14 +18,8 @@ export const Skills: React.FC = () => {
   const { colorScheme } = useMantineColorScheme();
   const isDarkMode = colorScheme === "dark";
 
-  const {
-    languages,
-    frameworks,
-    databases,
-    cloud,
-    versionControl,
-    certifications,
-  } = skillsData as SkillsType;
+  const { languages, frameworks, databases, cloud, tooling, certifications } =
+    skillsData as SkillsType;
 
   const slides = [
     {
@@ -39,19 +33,19 @@ export const Skills: React.FC = () => {
       icon: IconKeyframes,
     },
     {
-      title: "Databases & Data Management",
-      items: databases,
-      icon: IconDatabaseCog,
-    },
-    {
       title: "Cloud & Infrastructure",
       items: cloud,
       icon: IconCloudCheck,
     },
     {
-      title: "Version Control",
-      items: versionControl,
+      title: "Tooling",
+      items: tooling,
       icon: IconGitBranch,
+    },
+    {
+      title: "Databases & Data Management",
+      items: databases,
+      icon: IconDatabaseCog,
     },
     {
       title: "Certifications",

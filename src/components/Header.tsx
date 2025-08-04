@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import toast from "react-hot-toast";
-import cvUrl from "../assets/Joe Brown CV PDF NC.pdf";
+import cvUrl from "../assets/Joe Brown CV PDF DEV.pdf";
 import { Theme } from "../types/header";
 import { Modal, useMantineColorScheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
