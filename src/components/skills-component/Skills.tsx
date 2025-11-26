@@ -6,11 +6,10 @@ import { SkillsType } from "../../types/skills";
 import {
   IconBrandTypescript,
   IconKeyframes,
-  IconDatabaseCog,
   IconCloudCheck,
-  IconGitBranch,
   IconCertificate,
   IconArrowRight,
+  IconTools,
   IconArrowLeft,
 } from "@tabler/icons-react";
 
@@ -21,9 +20,8 @@ export const Skills: React.FC = () => {
   const {
     languages,
     frameworks,
-    databases,
+    tools,
     cloud,
-    versionControl,
     certifications,
   } = skillsData as SkillsType;
 
@@ -39,19 +37,14 @@ export const Skills: React.FC = () => {
       icon: IconKeyframes,
     },
     {
-      title: "Databases & Data Management",
-      items: databases,
-      icon: IconDatabaseCog,
+      title: "Tools & Practices",
+      items: tools,
+      icon: IconTools,
     },
     {
       title: "Cloud & Infrastructure",
       items: cloud,
       icon: IconCloudCheck,
-    },
-    {
-      title: "Version Control",
-      items: versionControl,
-      icon: IconGitBranch,
     },
     {
       title: "Certifications",

@@ -1,8 +1,7 @@
 export interface SkillsType {
   languages: string[];
   frameworks: string[];
-  databases: string[];
   cloud: string[];
-  versionControl: string[];
+  tools: string[];
   certifications: string[];
 }

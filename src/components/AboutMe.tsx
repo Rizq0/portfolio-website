@@ -76,19 +76,9 @@ export const AboutMe: React.FC = () => {
           <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
             {
               <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4">
-                <p className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg text-center sm:text-2xl">
-                  I’m a passionate{" "}
-                  <span className="text-button">Full Stack Developer</span> with
-                  a solid foundation in web development and expertise in both
-                  frontend and backend technologies. A quick learner and team
-                  player, I’m always eager to explore new tools, frameworks, and
-                  technologies that can enhance my skills. I also have a strong
-                  interest in <span className="text-button">DevOps</span>, and
-                  enjoy learning about infrastructure, CI/CD, and tools that
-                  help bridge development and operations. I’m currently seeking
-                  new opportunities to contribute my skills and grow further in
-                  the tech industry. Feel free to reach out!
-                </p>
+                  <p className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg text-center sm:text-2xl">
+                      An honest, resourceful, and motivated technology professional with a foundational background in software development, experienced across <span className="text-button">frontend</span>, <span className="text-button">backend</span>, and <span className="text-button">cloud</span> technologies. Currently working as a <span className="text-button">Junior Platform &amp; DevOps Engineer</span>, applying skills in real-world scenarios. Open to <span className="text-button">Software Development</span>, <span className="text-button">DevOps</span>, and <span className="text-button">Platform Engineer</span> roles. Committed to contributing effectively, approaching challenges with a forward-thinking mindset, and continuously expanding knowledge through ongoing learning and certifications to help advance the company’s goals.
+                  </p>
               </div>
             }
           </Accordion.Panel>
