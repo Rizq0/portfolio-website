@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import toast from "react-hot-toast";
-import cvUrl from "../assets/Joe Brown CV PDF NC.pdf";
+import cvUrl from "../assets/Joe Brown CV PDF DEV.pdf";
 import { Theme } from "../types/header";
 import { Modal, useMantineColorScheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
   const toggleDarkMode = () => {
     const newDarkModeState = !darkMode;
     if (newDarkModeState) {
-      toast("My old friend!", {
+      toast("Darkness my old friend!", {
         icon: "🌚",
         style: {
           borderRadius: "10px",
@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
     if (confirm("Are you sure you want to download this file?")) {
       const link = document.createElement("a");
       link.href = cvUrl;
-      link.download = "Joe Brown - CV 2025.pdf";
+      link.download = "Joe Brown - CV DEV PDF.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -235,8 +235,8 @@ export const Header: React.FC = () => {
           <h1 className="text-headlinelight dark:text-headlinedark font-gabarito font-medium text-5xl">
             Joe Brown
           </h1>
-          <h2 className="text-button font-gabarito font-medium text-2xl">
-            Junior Software Developer
+          <h2 className="text-button font-gabarito font-medium sm:text-2xl text-xl">
+            Junior Platform & DevOps Engineer
           </h2>
         </div>
       </div>
