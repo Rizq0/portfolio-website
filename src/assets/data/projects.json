@@ -1,33 +1,6 @@
 [
   {
     "id": 1,
-    "name": "Northcoders Backend - NC News",
-    "description": "This project is an API built to be a backend service for accessing application data programmatically, which will allow information to be provided to the frontend architecture.",
-    "technologies": [
-      "Jest",
-      "Supertest",
-      "Express",
-      "JavaScript",
-      "PSQL",
-      "PostgreSQL"
-    ],
-    "link": "https://joe-b-nc-news.onrender.com/api",
-    "image": "https://github.com/Rizq0/be-nc-news/blob/main/misc/be-demo.gif?raw=true",
-    "repository": "https://github.com/Rizq0/be-nc-news",
-    "state": "Live"
-  },
-  {
-    "id": 2,
-    "name": "Northcoders Frontend - NC News",
-    "description": "This project is a dynamic frontend designed to provide users with an engaging and intuitive interface for the NC News - Backend API. With functionality of the components being prioritised during development.",
-    "technologies": ["React", "Vite", "Lottie", "Axios", "JavaScript"],
-    "link": "https://nc-news-joeb.netlify.app/",
-    "image": "https://github.com/Rizq0/fe-nc-news/blob/main/plan/wanadQ7.gif?raw=true",
-    "repository": "https://github.com/Rizq0/fe-nc-news",
-    "state": "Live"
-  },
-  {
-    "id": 3,
     "name": "Museum Curator - MVP / Demo",
     "description": "A full stack web application for curating and exploring museum artwork collections. This project was built as a freelance MVP / demo for a client.",
     "technologies": [
@@ -52,18 +25,18 @@
     "state": "Live"
   },
   {
-    "id": 4,
-    "name": "Playd - Find A DJ",
-    "description": "This app helps DJs find clients, and music lovers to find the perfect sound for their event. It's like Tinder - but for music.",
-    "technologies": ["React Native", "Expo", "Firebase", "TypeScript"],
-    "link": "https://northcoders.com/project-phase/playd",
-    "image": "https://i.imgur.com/zv1MKB2.png",
-    "repository": "https://github.com/Dimeben/playd",
-    "state": "Live"
+    "id": 2,
+    "name": "Dating App (Inactive)",
+    "description": "Built via a tutorial to practice and experiment with a .NET backend and Angular frontend integration.",
+    "technologies": ["C#", "ASP.NET Core", "Entity Framework", "SQLite", "Angular", "TypeScript", "TailwindCSS", "DaisyUI"],
+    "link": "",
+    "image": "https://placehold.co/800x600/0f172a/94a3b8?text=Project%20Preview",
+    "repository": "https://github.com/Rizq0/unspecified-dating-app",
+    "state": "Inactive"
   },
   {
-    "id": 5,
-    "name": "Tier List Creator - Inactive",
+    "id": 3,
+    "name": "Tier List Creator (Inactive)",
     "description": "An inactive full stack web application designed to let users create custom tier lists. Originally built to explore Go as a backend. While development is currently paused, it showcases a functional backend.",
     "technologies": [
       "React",
@@ -75,9 +48,36 @@
       "SQLite"
     ],
     "link": "",
-    "image": "https://i.imgur.com/9uytpbm.png",
+    "image": "https://placehold.co/800x600/0f172a/94a3b8?text=Project%20Preview",
     "repository": "https://github.com/Lost-in-the-Idea/tier-list-creator",
     "state": "Inactive"
+  },
+  {
+    "id": 4,
+    "name": "Northcoders Backend - NC News",
+    "description": "This project is an API built to be a backend service for accessing application data programmatically, which will allow information to be provided to the frontend architecture.",
+    "technologies": [
+      "Jest",
+      "Supertest",
+      "Express",
+      "JavaScript",
+      "PSQL",
+      "PostgreSQL"
+    ],
+    "link": "https://joe-b-nc-news.onrender.com/api",
+    "image": "https://github.com/Rizq0/be-nc-news/blob/main/misc/be-demo.gif?raw=true",
+    "repository": "https://github.com/Rizq0/be-nc-news",
+    "state": "Live"
+  },
+  {
+    "id": 5,
+    "name": "Northcoders Frontend - NC News",
+    "description": "This project is a dynamic frontend designed to provide users with an engaging and intuitive interface for the NC News - Backend API. With functionality of the components being prioritised during development.",
+    "technologies": ["React", "Vite", "Lottie", "Axios", "JavaScript"],
+    "link": "https://nc-news-joeb.netlify.app/",
+    "image": "https://github.com/Rizq0/fe-nc-news/blob/main/plan/wanadQ7.gif?raw=true",
+    "repository": "https://github.com/Rizq0/fe-nc-news",
+    "state": "Live"
   },
   {
     "id": 6,
