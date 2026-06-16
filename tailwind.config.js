@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: "selector",
+  darkMode: ["selector", "[data-theme='portfolio-dark']"],
   safelist: ["md:pt-0"],
   theme: {
     screens: {
@@ -21,6 +21,10 @@ export default {
       subheadlinelight: "#2e2f3e",
     },
     extend: {
+      colors: {
+        black: "#000000",
+        white: "#ffffff",
+      },
       fontFamily: {
         gabarito: ["Gabarito", "sans-serif"],
       },
@@ -38,4 +42,30 @@ export default {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        "portfolio-dark": {
+          primary: "#ff8906",
+          "primary-content": "#fffffe",
+          "base-100": "#0f0e17",
+          "base-content": "#fffffe",
+          neutral: "#a7a9be",
+          secondary: "#2e2f3e",
+          "secondary-content": "#fffffe",
+        },
+      },
+      {
+        "portfolio-light": {
+          primary: "#ff8906",
+          "primary-content": "#fffffe",
+          "base-100": "#fffffe",
+          "base-content": "#0f0e17",
+          neutral: "#a7a9be",
+          secondary: "#2e2f3e",
+          "secondary-content": "#fffffe",
+        },
+      },
+    ],
+  },
 };

@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import cvUrl from "../assets/Joe Brown CV PDF DEV.pdf";
-import { Modal } from "@mantine/core";
-import { useDisclosure, useLocalStorage } from "@mantine/hooks";
 import { ContactMe } from "./ContactMe";
 import { Theme } from "../types/header.ts";
 
@@ -12,16 +10,23 @@ const initialiseTheme = (): Theme => {
 };
 
 export const Header: React.FC = () => {
-  const [opened, { open, close }] = useDisclosure(false);
-  const [colorScheme, setColorScheme] = useLocalStorage<Theme>({
-    key: "theme",
-    defaultValue: initialiseTheme(),
+  const [modalOpen, setModalOpen] = useState(false);
+  const [colorScheme, setColorScheme] = useState<Theme>(() => {
+    return (localStorage.getItem("theme") as Theme) ?? initialiseTheme();
   });
 
   useEffect(() => {
-    localStorage.setItem("mantine-color-scheme-value", colorScheme);
-    document.documentElement.classList.toggle("dark", colorScheme === "dark");
+    localStorage.setItem("theme", colorScheme);
+    const isDark = colorScheme === "dark";
+    document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "portfolio-dark" : "portfolio-light"
+    );
   }, [colorScheme]);
+
+  const openDialog = () => setModalOpen(true);
+  const closeDialog = () => setModalOpen(false);
 
   const toggleColorScheme = () => {
     setColorScheme((prev) => (prev === "dark" ? "light" : "dark"));
@@ -56,20 +61,25 @@ export const Header: React.FC = () => {
 
   return (
     <header className="w-full">
-      <Modal
-        opened={opened}
-        onClose={close}
-        title="Contact Me"
-        centered
-        lockScroll={false}
-        className="font-gabarito text-lg dark:text-headlinedark text-headlinelight max-w-lg"
-        classNames={{
-          body: "bg-backgroundlight dark:bg-backgrounddark",
-          header: "bg-backgroundlight dark:bg-backgrounddark",
-        }}
-      >
-        <ContactMe />
-      </Modal>
+      {modalOpen && (
+        <div
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50"
+          onClick={closeDialog}
+        >
+          <div
+            className="bg-backgroundlight dark:bg-backgrounddark rounded-lg p-6 max-w-lg w-full mx-4 font-gabarito text-headlinelight dark:text-headlinedark"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-lg font-medium mb-4">Contact Me</h3>
+            <ContactMe />
+            <div className="flex justify-end mt-4">
+              <button className="btn btn-ghost" onClick={closeDialog}>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="h-32 mx-auto flex justify-around md:justify-between items-center flex-wrap w-full pt-4 md:pt-0">
         <nav>
           <ul className="flex space-x-4">
@@ -149,7 +159,7 @@ export const Header: React.FC = () => {
             <li className="flex items-center justify-center flex-grow">
               <button
                 className="text-backgrounddark hover:text-button dark:text-backgroundlight"
-                onClick={open}
+                onClick={openDialog}
                 title="Contact Me"
               >
                 <svg

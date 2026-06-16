@@ -1,7 +1,6 @@
 import React from "react";
 // import selfUrl from "../assets/images/selfimage.png";
 import selfPicture from "../assets/images/selfimage2.jpg";
-import { Accordion } from "@mantine/core";
 import { ContactMe } from "./ContactMe";
 import { Projects } from "./Projects";
 import {
@@ -53,108 +52,106 @@ export const AboutMe: React.FC = () => {
         </h2>
       </div>
       <hr className="text-button mt-12 mb-12 border-t-[4px] rounded w-full" />
-      <Accordion
-        value={activeValue}
-        onChange={setActiveValue}
-        variant="separated"
-        radius="md"
-        chevronPosition="left"
-        styles={{ item: { border: "none" } }}
-        className="dark:bg-backgrounddark bg-backgroundlight w-full"
-      >
-        <Accordion.Item
-          key="About Me"
-          value="About Me"
-          className="dark:bg-backgrounddark bg-backgroundlight"
-        >
-          <Accordion.Control
-            icon={<IconId size={48} />}
-            className="dark:bg-backgrounddark bg-backgroundlight hover:text-button font-gabarito text-4xl dark:text-headlinedark text-headlinelight"
-          >
-            About Me
-          </Accordion.Control>
-          <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
-            {
-              <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4">
-                <p className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg text-center sm:text-2xl">
-                  A technology professional with a strong background spanning{" "}
-                  <span className="text-button">Software Development</span>,{" "}
-                  <span className="text-button">Cloud Infrastructure</span> and{" "}
-                  <span className="text-button">
-                    Platform / DevOps Engineering
-                  </span>
-                  . Currently working as a{" "}
-                  <span className="text-button">
-                    Platform &amp; DevOps Engineer
-                  </span>
-                  , delivering real world production impact across{" "}
-                  <span className="text-button">Kubernetes</span>,{" "}
-                  <span className="text-button">CI/CD Pipelines</span> and{" "}
-                  <span className="text-button">Azure Infrastructure</span>.
-                  Bringing a{" "}
-                  <span className="text-button">full stack developer</span>{" "}
-                  mindset to platform engineering, with a history of driving
-                  process improvements and technical initiatives from planning
-                  through to delivery. Open to{" "}
-                  <span className="text-button">Software Development</span>,{" "}
-                  <span className="text-button">DevOps</span>, and{" "}
-                  <span className="text-button">Platform Engineer</span> roles.
-                </p>
-              </div>
+      <div className="w-full flex flex-col gap-2">
+        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md">
+          <input
+            type="radio"
+            name="about-accordion"
+            checked={activeValue === "About Me"}
+            onChange={() => {}}
+            onClick={() =>
+              setActiveValue(activeValue === "About Me" ? null : "About Me")
             }
-          </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item
-          key="Skills"
-          value="Skills"
-          className="dark:bg-backgrounddark bg-backgroundlight"
-        >
-          <Accordion.Control
-            icon={<IconBinaryTree size={48} />}
-            className="dark:bg-backgrounddark bg-backgroundlight text-4xl hover:text-button font-gabarito dark:text-headlinedark text-headlinelight"
-          >
-            Skills
-          </Accordion.Control>
-          <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
-            {<Skills key={mountKey} />}
-          </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item
-          key="Projects"
-          value="Projects"
-          className="dark:bg-backgrounddark bg-backgroundlight"
-        >
-          <Accordion.Control
-            icon={<IconTimelineEventExclamation size={48} />}
-            className="dark:bg-backgrounddark bg-backgroundlight text-4xl hover:text-button font-gabarito dark:text-headlinedark text-headlinelight "
-          >
-            Projects
-          </Accordion.Control>
-          <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
+          />
+          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight hover:text-button flex items-center gap-3">
+            <IconId size={48} /> About Me
+          </div>
+          <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark">
+            <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4">
+              <p className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg text-center sm:text-2xl">
+                An honest, resourceful, and motivated technology professional
+                with a foundational background in software development,
+                experienced across <span className="text-button">frontend</span>
+                , <span className="text-button">backend</span>, and{" "}
+                <span className="text-button">cloud</span> technologies.
+                Currently working as a{" "}
+                <span className="text-button">
+                  Junior Platform &amp; DevOps Engineer
+                </span>
+                , applying skills in real-world scenarios. Open to{" "}
+                <span className="text-button">Software Development</span>,{" "}
+                <span className="text-button">DevOps</span>, and{" "}
+                <span className="text-button">Platform Engineer</span> roles.
+                Committed to contributing effectively, approaching challenges
+                with a forward-thinking mindset, and continuously expanding
+                knowledge through ongoing learning and certifications to help
+                advance the company’s goals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md">
+          <input
+            type="radio"
+            name="about-accordion"
+            checked={activeValue === "Skills"}
+            onChange={() => {}}
+            onClick={() =>
+              setActiveValue(activeValue === "Skills" ? null : "Skills")
+            }
+          />
+          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight hover:text-button flex items-center gap-3">
+            <IconBinaryTree size={48} /> Skills
+          </div>
+          <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark min-w-0 overflow-hidden">
+            <Skills key={mountKey} />
+          </div>
+        </div>
+
+        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md">
+          <input
+            type="radio"
+            name="about-accordion"
+            checked={activeValue === "Projects"}
+            onChange={() => {}}
+            onClick={() =>
+              setActiveValue(activeValue === "Projects" ? null : "Projects")
+            }
+          />
+          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight hover:text-button flex items-center gap-3">
+            <IconTimelineEventExclamation size={48} /> Projects
+          </div>
+          <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark min-w-0 overflow-hidden">
             {windowWidth < 768 ? (
               <CarouselProjects key={mountKey} />
             ) : (
               <Projects />
             )}
-          </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item
-          key="Contact Me"
-          value="Contact Me"
+          </div>
+        </div>
+
+        <div
           id="contact"
-          className="dark:bg-backgrounddark bg-backgroundlight"
+          className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md"
         >
-          <Accordion.Control
-            icon={<IconMailSpark size={48} />}
-            className="dark:bg-backgrounddark bg-backgroundlight hover:text-button font-gabarito text-4xl dark:text-headlinedark text-headlinelight"
-          >
-            Contact Me
-          </Accordion.Control>
-          <Accordion.Panel className="dark:bg-backgrounddark bg-backgroundlight">
-            {<ContactMe />}
-          </Accordion.Panel>
-        </Accordion.Item>
-      </Accordion>
+          <input
+            type="radio"
+            name="about-accordion"
+            checked={activeValue === "Contact Me"}
+            onChange={() => {}}
+            onClick={() =>
+              setActiveValue(activeValue === "Contact Me" ? null : "Contact Me")
+            }
+          />
+          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight hover:text-button flex items-center gap-3">
+            <IconMailSpark size={48} /> Contact Me
+          </div>
+          <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark">
+            <ContactMe />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
