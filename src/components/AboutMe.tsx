@@ -53,7 +53,7 @@ export const AboutMe: React.FC = () => {
       </div>
       <hr className="text-button mt-12 mb-12 border-t-[4px] rounded w-full" />
       <div className="w-full flex flex-col gap-2">
-        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md">
+        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md group">
           <input
             type="radio"
             name="about-accordion"
@@ -63,7 +63,7 @@ export const AboutMe: React.FC = () => {
               setActiveValue(activeValue === "About Me" ? null : "About Me")
             }
           />
-          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight hover:text-button flex items-center gap-3">
+          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight group-hover:text-button flex items-center gap-3">
             <IconId size={48} /> About Me
           </div>
           <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark">
@@ -96,7 +96,7 @@ export const AboutMe: React.FC = () => {
           </div>
         </div>
 
-        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md">
+        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md group">
           <input
             type="radio"
             name="about-accordion"
@@ -106,7 +106,7 @@ export const AboutMe: React.FC = () => {
               setActiveValue(activeValue === "Skills" ? null : "Skills")
             }
           />
-          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight hover:text-button flex items-center gap-3">
+          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight group-hover:text-button flex items-center gap-3">
             <IconBinaryTree size={48} /> Skills
           </div>
           <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark min-w-0 overflow-hidden">
@@ -114,7 +114,7 @@ export const AboutMe: React.FC = () => {
           </div>
         </div>
 
-        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md">
+        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md group">
           <input
             type="radio"
             name="about-accordion"
@@ -124,7 +124,7 @@ export const AboutMe: React.FC = () => {
               setActiveValue(activeValue === "Projects" ? null : "Projects")
             }
           />
-          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight hover:text-button flex items-center gap-3">
+          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight group-hover:text-button flex items-center gap-3">
             <IconTimelineEventExclamation size={48} /> Projects
           </div>
           <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark min-w-0 overflow-hidden">
@@ -138,7 +138,7 @@ export const AboutMe: React.FC = () => {
 
         <div
           id="contact"
-          className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md"
+          className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md group"
         >
           <input
             type="radio"
@@ -149,7 +149,7 @@ export const AboutMe: React.FC = () => {
               setActiveValue(activeValue === "Contact Me" ? null : "Contact Me")
             }
           />
-          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight hover:text-button flex items-center gap-3">
+          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight group-hover:text-button flex items-center gap-3">
             <IconMailSpark size={48} /> Contact Me
           </div>
           <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark">
