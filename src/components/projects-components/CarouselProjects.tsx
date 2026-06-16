@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Project } from "../../types/project";
-import { Carousel } from "@mantine/carousel";
+import useEmblaCarousel from "embla-carousel-react";
 import projectsData from "../../assets/data/projects.json";
 import { IndividualProject } from "./IndividualProject";
-import { useMantineColorScheme } from "@mantine/core";
 import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react";
 
 export const Projects: React.FC = () => {
@@ -12,42 +11,80 @@ export const Projects: React.FC = () => {
 
 export const CarouselProjects: React.FC = () => {
   const projects: Project[] = projectsData;
-  const { colorScheme } = useMantineColorScheme();
-  const isDarkMode = colorScheme === "dark";
+  const isDarkMode = document.documentElement.classList.contains("dark");
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    setScrollSnaps(emblaApi.scrollSnapList());
+    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi]);
+
+  const controlStyle = {
+    backgroundColor: isDarkMode ? "white" : "#0f0e17",
+    color: isDarkMode ? "#0f0e17" : "white",
+    border: "0.15rem solid #ff8906",
+  };
+
+  const indicatorActive = isDarkMode ? "white" : "#0f0e17";
+  const indicatorInactive = isDarkMode ? "#555" : "#ccc";
 
   return (
-    <Carousel
-      slideSize={{ base: "100%", sm: "50%" }}
-      slideGap={{ base: "xl", sm: "md" }}
-      align="start"
-      slidesToScroll={1}
-      controlsOffset="xs"
-      controlSize={24}
-      nextControlIcon={<IconArrowRight size={16} />}
-      previousControlIcon={<IconArrowLeft size={16} />}
-      loop
-      withIndicators
-      styles={{
-        control: {
-          backgroundColor: isDarkMode ? "white" : "#0f0e17",
-          color: isDarkMode ? "#0f0e17" : "white",
-          border: "0.15rem solid #ff8906",
-          cursor: "pointer",
-        },
-        indicator: {
-          backgroundColor: isDarkMode ? "white" : "#0f0e17",
-        },
-        slide: {
-          display: "flex",
-          flexGrow: 1,
-        },
-      }}
-    >
-      {projects.map((project: Project) => (
-        <Carousel.Slide key={project.id}>
-          <IndividualProject key={project.id} project={project} />
-        </Carousel.Slide>
-      ))}
-    </Carousel>
+    <div className="relative w-full">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex sm:-ml-4">
+          {projects.map((project: Project) => (
+            <div
+              key={project.id}
+              className="flex-[0_0_100%] sm:flex-[0_0_50%] sm:pl-4 min-w-0"
+            >
+              <IndividualProject project={project} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center gap-3 mt-4">
+        <button
+          onClick={scrollPrev}
+          style={controlStyle}
+          className="rounded-full p-1 cursor-pointer"
+          aria-label="Previous slide"
+        >
+          <IconArrowLeft size={16} />
+        </button>
+
+        <div className="flex gap-2">
+          {scrollSnaps.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className="w-2 h-2 rounded-full transition-colors"
+              style={{ backgroundColor: index === selectedIndex ? indicatorActive : indicatorInactive }}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={scrollNext}
+          style={controlStyle}
+          className="rounded-full p-1 cursor-pointer"
+          aria-label="Next slide"
+        >
+          <IconArrowRight size={16} />
+        </button>
+      </div>
+    </div>
   );
 };
