@@ -222,7 +222,7 @@ export const Header: React.FC = () => {
             Joe Brown
           </h1>
           <h2 className="text-button font-gabarito font-medium sm:text-2xl text-xl">
-            Junior Platform & DevOps Engineer
+            Platform & DevOps Engineer
           </h2>
         </div>
       </div>
