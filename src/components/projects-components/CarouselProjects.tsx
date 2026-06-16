@@ -11,7 +11,6 @@ export const Projects: React.FC = () => {
 
 export const CarouselProjects: React.FC = () => {
   const projects: Project[] = projectsData;
-  const isDarkMode = document.documentElement.classList.contains("dark");
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -29,15 +28,6 @@ export const CarouselProjects: React.FC = () => {
     onSelect();
     return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi]);
-
-  const controlStyle = {
-    backgroundColor: isDarkMode ? "white" : "#0f0e17",
-    color: isDarkMode ? "#0f0e17" : "white",
-    border: "0.15rem solid #ff8906",
-  };
-
-  const indicatorActive = isDarkMode ? "white" : "#0f0e17";
-  const indicatorInactive = isDarkMode ? "#555" : "#ccc";
 
   return (
     <div className="relative w-full">
@@ -57,8 +47,7 @@ export const CarouselProjects: React.FC = () => {
       <div className="flex items-center justify-center gap-3 mt-4">
         <button
           onClick={scrollPrev}
-          style={controlStyle}
-          className="rounded-full p-1 cursor-pointer"
+          className="bg-base-content text-base-100 border border-primary rounded-full p-1 cursor-pointer"
           aria-label="Previous slide"
         >
           <IconArrowLeft size={16} />
@@ -69,8 +58,7 @@ export const CarouselProjects: React.FC = () => {
             <button
               key={index}
               onClick={() => scrollTo(index)}
-              className="w-2 h-2 rounded-full transition-colors"
-              style={{ backgroundColor: index === selectedIndex ? indicatorActive : indicatorInactive }}
+              className={`w-2 h-2 rounded-full transition-colors ${index === selectedIndex ? "bg-base-content" : "bg-base-content/30"}`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -78,8 +66,7 @@ export const CarouselProjects: React.FC = () => {
 
         <button
           onClick={scrollNext}
-          style={controlStyle}
-          className="rounded-full p-1 cursor-pointer"
+          className="bg-base-content text-base-100 border border-primary rounded-full p-1 cursor-pointer"
           aria-label="Next slide"
         >
           <IconArrowRight size={16} />

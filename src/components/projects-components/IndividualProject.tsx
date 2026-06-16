@@ -9,7 +9,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
   const { name, description, technologies, link, repository, image } = project;
 
   return (
-    <div className="relative flex flex-col p-4 border-2 border-headlinelight dark:border-headlinedark rounded-lg h-full w-full">
+    <div className="relative flex flex-col p-4 border-2 border-base-content rounded-lg h-full w-full">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -20,22 +20,22 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
         }}
       />
       <div className="relative z-10 flex flex-col h-full gap-4">
-        <h2 className="text-headlinelight dark:text-headlinedark font-gabarito font-medium text-2xl">
+        <h2 className="text-base-content font-gabarito font-medium text-2xl">
           {name}
         </h2>
         <div>
-          <p className="text-headlinelight dark:text-buttontext text-lg font-gabarito">
+          <p className="text-base-content text-lg font-gabarito">
             {description}
           </p>
           <div>
-            <h3 className="text-headlinelight dark:text-headlinedark font-gabarito font-medium text-2xl mt-4">
+            <h3 className="text-base-content font-gabarito font-medium text-2xl mt-4">
               Technologies
             </h3>
-            <ul className="list-disc list-inside text-subheadlinelight dark:text-paragraphdark flex flex-row flex-wrap">
+            <ul className="list-disc list-inside text-base-content/70 flex flex-row flex-wrap">
               {technologies.map((technology) => (
                 <li
                   key={technology}
-                  className="list-none mr-2 my-2 rounded-full bg-button dark:text-buttontext font-gabarito font-medium px-3 text-lg"
+                  className="list-none mr-2 my-2 rounded-full bg-primary text-primary-content font-gabarito font-medium px-3 text-lg"
                 >
                   {technology}
                 </li>
@@ -46,7 +46,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
         <div className="flex flex-row justify-end gap-4 mt-auto">
           {link === "" ? null : (
             <a
-              className="text-backgrounddark hover:text-button dark:text-backgroundlight dark:hover:text-button"
+              className="text-base-content hover:text-primary"
               href={link}
               target="_blank"
               title="Live Site"
@@ -69,7 +69,7 @@ export const IndividualProject: React.FC<Props> = ({ project }) => {
             </a>
           )}
           <a
-            className="text-backgrounddark hover:text-button dark:text-backgroundlight dark:hover:text-button"
+            className="text-base-content hover:text-primary"
             href={repository}
             target="_blank"
             title="GitHub"

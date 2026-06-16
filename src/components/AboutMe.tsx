@@ -35,9 +35,9 @@ export const AboutMe: React.FC = () => {
   return (
     <div className="flex flex-col items-center flex-wrap w-full pt-4 mt-8">
       <div className="relative w-[266px] h-[266px]">
-        <div className="absolute inset-0 rounded-full dark:bg-button shadow-lg dark:shadow-button/50 animate-orbit bg-backgrounddark shadow-backgrounddark/50"></div>
+        <div className="absolute inset-0 rounded-full bg-primary shadow-lg shadow-primary/50 animate-orbit"></div>
 
-        <div className="absolute inset-[2px] w-[262px] h-[262px] rounded-full overflow-hidden bg-backgrounddark dark:bg-backgroundlight">
+        <div className="absolute inset-[2px] w-[262px] h-[262px] rounded-full overflow-hidden bg-base-100">
           <img
             src={selfPicture}
             alt="Joe Self Image"
@@ -45,15 +45,15 @@ export const AboutMe: React.FC = () => {
           />
         </div>
       </div>
-      <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4 mt-8">
-        <h2 className="text-headlinedark dark:text-headlinelight font-gabarito font-medium text-4xl">
+      <div className="bg-base-200 rounded-lg p-4 mt-8">
+        <h2 className="text-base-content font-gabarito font-medium text-4xl">
           Hello! I'm{" "}
-          <span className="text-button font-gabarito font-medium">Joe!</span>
+          <span className="text-primary font-gabarito font-medium">Joe!</span>
         </h2>
       </div>
-      <hr className="text-button mt-12 mb-12 border-t-[4px] rounded w-full" />
+      <hr className="border-primary mt-12 mb-12 border-t-[4px] rounded w-full" />
       <div className="w-full flex flex-col gap-2">
-        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md group">
+        <div className="collapse collapse-arrow bg-base-100 rounded-md group">
           <input
             type="radio"
             name="about-accordion"
@@ -63,40 +63,40 @@ export const AboutMe: React.FC = () => {
               setActiveValue(activeValue === "About Me" ? null : "About Me")
             }
           />
-          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight group-hover:text-button flex items-center gap-3">
+          <div className="collapse-title font-gabarito text-4xl font-medium text-base-content group-hover:text-primary flex items-center gap-3">
             <IconId size={48} /> About Me
           </div>
-          <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark">
-            <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4">
-              <p className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg text-center sm:text-2xl">
+          <div className="collapse-content bg-base-100">
+            <div className="bg-base-200 rounded-lg p-4">
+              <p className="text-base-content font-gabarito font-medium text-lg text-center sm:text-2xl">
                 A technology professional with a strong background spanning{" "}
-                <span className="text-button">Software Development</span>,{" "}
-                <span className="text-button">Cloud Infrastructure</span> and{" "}
-                <span className="text-button">
+                <span className="text-primary">Software Development</span>,{" "}
+                <span className="text-primary">Cloud Infrastructure</span> and{" "}
+                <span className="text-primary">
                   Platform / DevOps Engineering
                 </span>
                 . Currently working as a{" "}
-                <span className="text-button">
+                <span className="text-primary">
                   Platform &amp; DevOps Engineer
                 </span>
                 , delivering real world production impact across{" "}
-                <span className="text-button">Kubernetes</span>,{" "}
-                <span className="text-button">CI/CD Pipelines</span> and{" "}
-                <span className="text-button">Azure Infrastructure</span>.
+                <span className="text-primary">Kubernetes</span>,{" "}
+                <span className="text-primary">CI/CD Pipelines</span> and{" "}
+                <span className="text-primary">Azure Infrastructure</span>.
                 Bringing a{" "}
-                <span className="text-button">Full Stack Developer</span>{" "}
+                <span className="text-primary">Full Stack Developer</span>{" "}
                 mindset to platform engineering, with a history of driving
                 process improvements and technical initiatives from planning
                 through to delivery. Open to{" "}
-                <span className="text-button">Software Development</span>,{" "}
-                <span className="text-button">DevOps</span>, and{" "}
-                <span className="text-button">Platform Engineer</span> roles.
+                <span className="text-primary">Software Development</span>,{" "}
+                <span className="text-primary">DevOps</span>, and{" "}
+                <span className="text-primary">Platform Engineer</span> roles.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md group">
+        <div className="collapse collapse-arrow bg-base-100 rounded-md group">
           <input
             type="radio"
             name="about-accordion"
@@ -106,15 +106,15 @@ export const AboutMe: React.FC = () => {
               setActiveValue(activeValue === "Skills" ? null : "Skills")
             }
           />
-          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight group-hover:text-button flex items-center gap-3">
+          <div className="collapse-title font-gabarito text-4xl font-medium text-base-content group-hover:text-primary flex items-center gap-3">
             <IconBinaryTree size={48} /> Skills
           </div>
-          <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark min-w-0 overflow-hidden">
+          <div className="collapse-content bg-base-100 min-w-0 overflow-hidden">
             <Skills key={mountKey} />
           </div>
         </div>
 
-        <div className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md group">
+        <div className="collapse collapse-arrow bg-base-100 rounded-md group">
           <input
             type="radio"
             name="about-accordion"
@@ -124,10 +124,10 @@ export const AboutMe: React.FC = () => {
               setActiveValue(activeValue === "Projects" ? null : "Projects")
             }
           />
-          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight group-hover:text-button flex items-center gap-3">
+          <div className="collapse-title font-gabarito text-4xl font-medium text-base-content group-hover:text-primary flex items-center gap-3">
             <IconTimelineEventExclamation size={48} /> Projects
           </div>
-          <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark min-w-0 overflow-hidden">
+          <div className="collapse-content bg-base-100 min-w-0 overflow-hidden">
             {windowWidth < 768 ? (
               <CarouselProjects key={mountKey} />
             ) : (
@@ -138,7 +138,7 @@ export const AboutMe: React.FC = () => {
 
         <div
           id="contact"
-          className="collapse collapse-arrow bg-backgroundlight dark:bg-backgrounddark rounded-md group"
+          className="collapse collapse-arrow bg-base-100 rounded-md group"
         >
           <input
             type="radio"
@@ -149,10 +149,10 @@ export const AboutMe: React.FC = () => {
               setActiveValue(activeValue === "Contact Me" ? null : "Contact Me")
             }
           />
-          <div className="collapse-title font-gabarito text-4xl font-medium dark:text-headlinedark text-headlinelight group-hover:text-button flex items-center gap-3">
+          <div className="collapse-title font-gabarito text-4xl font-medium text-base-content group-hover:text-primary flex items-center gap-3">
             <IconMailSpark size={48} /> Contact Me
           </div>
-          <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark">
+          <div className="collapse-content bg-base-100">
             <ContactMe />
           </div>
         </div>

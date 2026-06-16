@@ -39,32 +39,32 @@ export const ContactMe: React.FC = () => {
           type="text"
           name="from_name"
           placeholder="Your Name"
-          className="dark:text-headlinelight p-2 rounded-lg border-2 dark:bg-backgroundlight bg-backgrounddark text-headlinedark hover:border-button font-gabarito text-lg"
+          className="input input-bordered w-full font-gabarito text-lg"
           required
         />
         <input
           type="email"
           name="user_email"
           placeholder="Your Email"
-          className="dark:text-headlinelight p-2 rounded-lg border-2 dark:bg-backgroundlight bg-backgrounddark text-headlinedark hover:border-button font-gabarito text-lg"
+          className="input input-bordered w-full font-gabarito text-lg"
           required
         />
         <input
           type="text"
           name="company"
           placeholder="Company Name"
-          className="dark:text-headlinelight p-2 rounded-lg border-2 dark:bg-backgroundlight bg-backgrounddark text-headlinedark hover:border-button font-gabarito text-lg"
+          className="input input-bordered w-full font-gabarito text-lg"
           required
         />
         <textarea
           name="message"
           placeholder="Your Message"
-          className="dark:text-headlinelight p-2 rounded-lg border-2 dark:bg-backgroundlight bg-backgrounddark text-headlinedark h-40 min-h-[48px] max-h-[250px] hover:border-button font-gabarito text-lg"
+          className="textarea textarea-bordered w-full h-40 min-h-[48px] max-h-[250px] font-gabarito text-lg"
           required
         />
         <button
           type="submit"
-          className="bg-button text-headlinelight dark:text-buttontext font-gabarito font-medium text-xl p-2 rounded-lg mt-2 self-center dark:hover:text-headlinelight hover:text-buttontext"
+          className="btn btn-primary font-gabarito font-medium text-xl mt-2 self-center"
         >
           Send Message
         </button>
