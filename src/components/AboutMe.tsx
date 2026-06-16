@@ -69,23 +69,28 @@ export const AboutMe: React.FC = () => {
           <div className="collapse-content bg-backgroundlight dark:bg-backgrounddark">
             <div className="dark:bg-backgroundlight bg-backgrounddark rounded-lg p-4">
               <p className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg text-center sm:text-2xl">
-                An honest, resourceful, and motivated technology professional
-                with a foundational background in software development,
-                experienced across <span className="text-button">frontend</span>
-                , <span className="text-button">backend</span>, and{" "}
-                <span className="text-button">cloud</span> technologies.
-                Currently working as a{" "}
+                A technology professional with a strong background spanning{" "}
+                <span className="text-button">Software Development</span>,{" "}
+                <span className="text-button">Cloud Infrastructure</span> and{" "}
                 <span className="text-button">
-                  Junior Platform &amp; DevOps Engineer
+                  Platform / DevOps Engineering
                 </span>
-                , applying skills in real-world scenarios. Open to{" "}
+                . Currently working as a{" "}
+                <span className="text-button">
+                  Platform &amp; DevOps Engineer
+                </span>
+                , delivering real world production impact across{" "}
+                <span className="text-button">Kubernetes</span>,{" "}
+                <span className="text-button">CI/CD Pipelines</span> and{" "}
+                <span className="text-button">Azure Infrastructure</span>.
+                Bringing a{" "}
+                <span className="text-button">Full Stack Developer</span>{" "}
+                mindset to platform engineering, with a history of driving
+                process improvements and technical initiatives from planning
+                through to delivery. Open to{" "}
                 <span className="text-button">Software Development</span>,{" "}
                 <span className="text-button">DevOps</span>, and{" "}
                 <span className="text-button">Platform Engineer</span> roles.
-                Committed to contributing effectively, approaching challenges
-                with a forward-thinking mindset, and continuously expanding
-                knowledge through ongoing learning and certifications to help
-                advance the company’s goals.
               </p>
             </div>
           </div>
