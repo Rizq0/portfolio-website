@@ -13,8 +13,6 @@ import {
 } from "@tabler/icons-react";
 
 export const Skills: React.FC = () => {
-  const isDarkMode = document.documentElement.classList.contains("dark");
-
   const { languages, frameworks, tools, cloud, certifications } =
     skillsData as SkillsType;
 
@@ -43,15 +41,6 @@ export const Skills: React.FC = () => {
     return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi]);
 
-  const controlStyle = {
-    backgroundColor: isDarkMode ? "white" : "#0f0e17",
-    color: isDarkMode ? "#0f0e17" : "white",
-    border: "0.15rem solid #ff8906",
-  };
-
-  const indicatorActive = isDarkMode ? "white" : "#0f0e17";
-  const indicatorInactive = isDarkMode ? "#555" : "#ccc";
-
   return (
     <div className="relative w-full">
       <div className="overflow-hidden" ref={emblaRef}>
@@ -61,17 +50,17 @@ export const Skills: React.FC = () => {
               key={slide.title}
               className="flex-[0_0_100%] sm:flex-[0_0_50%] sm:pl-4 min-w-0"
             >
-              <div className="flex flex-col justify-start dark:bg-backgroundlight bg-backgrounddark p-4 h-full rounded-lg">
+              <div className="flex flex-col justify-start bg-base-200 p-4 h-full rounded-lg">
                 <div className="text-center w-full flex flex-row justify-between items-center">
-                  <h1 className="text-button font-medium text-2xl">{slide.title}</h1>
-                  <slide.icon size={48} className="dark:text-headlinelight text-headlinedark" />
+                  <h1 className="text-primary font-medium text-2xl">{slide.title}</h1>
+                  <slide.icon size={48} className="text-base-content" />
                 </div>
                 <ul>
                   <div className="text-center w-full flex flex-row flex-wrap justify-evenly mt-4">
                     {slide.items.map((item: string) => (
                       <li
                         key={item}
-                        className="dark:text-headlinelight text-headlinedark font-gabarito font-medium text-lg sm:text-xl mx-4 h-[60px]"
+                        className="text-base-content font-gabarito font-medium text-lg sm:text-xl mx-4 h-[60px]"
                       >
                         {item}
                       </li>
@@ -87,8 +76,7 @@ export const Skills: React.FC = () => {
       <div className="flex items-center justify-center gap-3 mt-4">
         <button
           onClick={scrollPrev}
-          style={controlStyle}
-          className="rounded-full p-1 cursor-pointer"
+          className="bg-base-content text-base-100 border border-primary rounded-full p-1 cursor-pointer"
           aria-label="Previous slide"
         >
           <IconArrowLeft size={16} />
@@ -99,8 +87,7 @@ export const Skills: React.FC = () => {
             <button
               key={index}
               onClick={() => scrollTo(index)}
-              className="w-2 h-2 rounded-full transition-colors"
-              style={{ backgroundColor: index === selectedIndex ? indicatorActive : indicatorInactive }}
+              className={`w-2 h-2 rounded-full transition-colors ${index === selectedIndex ? "bg-base-content" : "bg-base-content/30"}`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -108,8 +95,7 @@ export const Skills: React.FC = () => {
 
         <button
           onClick={scrollNext}
-          style={controlStyle}
-          className="rounded-full p-1 cursor-pointer"
+          className="bg-base-content text-base-100 border border-primary rounded-full p-1 cursor-pointer"
           aria-label="Next slide"
         >
           <IconArrowRight size={16} />
